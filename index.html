@@ -57,7 +57,6 @@
 							<button type="button" class="navbar-toggle collapsed"
 								data-toggle="collapse" data-target="#navbar-collapse-1"
 								aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
@@ -95,7 +94,10 @@
 			<section id="slider" class="section slider">
 				<div class="slide--item bg-overlay bg-overlay-dark">
 					<div class="bg-section">
-						<img src="assets/images/slider/slider-1.png" alt="bg">
+						<img src="assets/images/slider/slider-1.png" alt="bg" style="display:block;
+            width:100%;
+            height:auto;
+            filter: grayscale(100%) contrast(1.1) brightness(0.9);">
 					</div>
 					<div class="container">
 						<div class="row">
@@ -177,7 +179,10 @@
 						<!-- Imagen lateral -->
 						<div class="col-xs-12 col-sm-12 col-md-5 wow fadeInUp">
 							<img class="img-responsive center-block"
-								src="assets/images/slider/slider-2.png" alt="Equipo LAWMedic" />
+								src="assets/images/slider/slider-2.png" alt="Equipo LAWMedic" style="display:block;
+            width:100%;
+            height:auto;
+            filter: grayscale(100%) contrast(1.1) brightness(0.9);"/>
 						</div>
 
 						<!-- Contenido -->
@@ -335,115 +340,120 @@
 
 				</div>
 			</section>
+			
 			<section id="team" class="team team-1">
-				<div class="container">
-					<div class="row clearfix">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-							<div class="heading heading-1 text--center wow fadeInUp"
-								data-wow-duration="1s">
-								<h2 class="heading--title">Abogados Experimentados</h2>
-								<p class="heading--desc">Contamos con un equipo de especialistas en
-									derecho sanitario y médico-legal con amplia experiencia.</p>
-								<div class="heading--divider mb-80 heading--center"></div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<!-- Member #1 -->
-						<div class="col-xs-12 col-sm-4 col-md-4">
-							<div class="member">
-								<div class="member-img">
-									<img src="assets/images/team/team-1.jpeg" alt="member" />
-								</div>
-								<!-- .member-img end -->
-								<div class="member-info">
-									<h5>Yadira Hernández Acosta</h5>
-									<h6>Coordinación en CDMX</h6>
-								</div>
-								<!-- .member-info end -->
-							</div>
-							<!-- .member end -->
-						</div>
-						<!-- .col-md-3 end -->
-
-						<!-- Member #2 -->
-						<div class="col-xs-12 col-sm-4 col-md-4">
-							<div class="member">
-								<div class="member-img">
-									<img src="assets/images/team/team-2.jpeg" alt="member" />
-								</div>
-								<!-- .member-img end -->
-								<div class="member-info">
-									<h5>Jose Manuel Pegueros Reyes</h5>
-									<h6>Enlace Jurídico-Administrativo</h6>
-								</div>
-								<!-- .member-info end -->
-							</div>
-							<!-- .member end -->
-						</div>
-						<!-- .col-md-3 end -->
-
-						<!-- Member #3 -->
-						<div class="col-xs-12 col-sm-4 col-md-4">
-							<div class="member">
-								<div class="member-img">
-									<img src="assets/images/team/team-3.jpeg" alt="member" />
-								</div>
-								<!-- .member-img end -->
-								<div class="member-info">
-									<h5>Rafael Chapol Tepox</h5>
-									<h6>Coordinación General</h6>
-								</div>
-								<!-- .member-info end -->
-							</div>
-							<!-- .member end -->
-						</div>
-
-						<!-- Member #4 -->
-						<div class="col-xs-12 col-sm-4 col-md-4">
-							<div class="member">
-								<div class="member-img">
-									<img src="assets/images/team/team-4.jpeg" alt="member" />
-								</div>
-								<!-- .member-img end -->
-								<div class="member-info">
-									<h5>Delia Vanessa Aguilar Sánchez</h5>
-									<h6>Tramitación Sanitaria y Proyectos</h6>
-								</div>
-								<!-- .member-info end -->
-							</div>
-							<!-- .member end -->
-						</div>
-						<!-- .col-md-3 end -->
-
-						<!-- Member #5 -->
-						<div class="col-xs-12 col-sm-4 col-md-4">
-							<div class="member">
-								<div class="member-img">
-									<img src="assets/images/team/team-5.jpeg" alt="member" />
-								</div>
-								<!-- .member-img end -->
-								<div class="member-info">
-									<h5>Nayeli Ramos Lerdo</h5>
-									<h6>Calidad Administrativa</h6>
-								</div>
-								<!-- .member-info end -->
-							</div>
-							<!-- .member end -->
-						</div>
-						<!-- .col-md-3 end -->
-					</div>
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+				<div class="heading heading-1 text--center wow fadeInUp" data-wow-duration="1s">
+					<h2 class="heading--title">Abogados Experimentados</h2>
+					<p class="heading--desc">
+						Contamos con un equipo de especialistas en derecho sanitario y médico-legal con amplia experiencia.
+					</p>
+					<div class="heading--divider mb-80 heading--center"></div>
 				</div>
-			</section>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<!-- Carrusel de equipo (igual estilo que testimonios) -->
+				<div class="carousel" data-slide="3" data-slide-res="2"
+					 data-autoplay="true" data-nav="false" data-dots="false"
+					 data-space="30" data-loop="true" data-speed="800">
+
+					<!-- Member #1 -->
+					<div class="member">
+						<div class="member-img">
+							<img src="assets/images/team/team-1.jpeg" alt="member" style="display:block;
+            width:100%;
+            height:auto;
+            filter: grayscale(100%) contrast(1.1) brightness(0.9);" />
+						</div>
+						<div class="member-info">
+							<h5>Yadira Hernández Acosta</h5>
+							<h6>Coordinación en CDMX</h6>
+						</div>
+					</div>
+
+					<!-- Member #2 -->
+					<div class="member">
+						<div class="member-img">
+							<img src="assets/images/team/team-2.jpeg" alt="member" style="display:block;
+            width:100%;
+            height:auto;
+            filter: grayscale(100%) contrast(1.1) brightness(0.9);"/>
+						</div>
+						<div class="member-info">
+							<h5>Jose Manuel Pegueros Reyes</h5>
+							<h6>Enlace Jurídico-Administrativo</h6>
+						</div>
+					</div>
+
+					<!-- Member #3 -->
+					<div class="member">
+						<div class="member-img">
+							<img src="assets/images/team/team-3.jpeg" alt="member" style="display:block;
+            width:100%;
+            height:auto;
+            filter: grayscale(100%) contrast(1.1) brightness(0.9);" />
+						</div>
+						<div class="member-info">
+							<h5>Rafael Chapol Tepox</h5>
+							<h6>Coordinación General</h6>
+						</div>
+					</div>
+
+					<!-- Member #4 -->
+					<div class="member">
+						<div class="member-img">
+							<img src="assets/images/team/team-4.jpeg" alt="member" style="display:block;
+            width:100%;
+            height:auto;
+            filter: grayscale(100%) contrast(1.1) brightness(0.9);" />
+						</div>
+						<div class="member-info">
+							<h5>Delia Vanessa Aguilar Sánchez</h5>
+							<h6>Tramitación Sanitaria y Proyectos</h6>
+						</div>
+					</div>
+
+					<!-- Member #5 -->
+					<div class="member">
+						<div class="member-img">
+							<img src="assets/images/team/team-5.jpeg" alt="member" style="display:block;
+            width:100%;
+            height:auto;
+            filter: grayscale(100%) contrast(1.1) brightness(0.9);"/>
+						</div>
+						<div class="member-info">
+							<h5>Nayeli Ramos Lerdo</h5>
+							<h6>Calidad Administrativa</h6>
+						</div>
+					</div>
+
+				</div> <!-- .carousel end -->
+			</div>
+		</div>
+	</div>
+</section>
+
 
 			<section id="banner3" class="bg-white pt-0 pb-0">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-5 pr-0 pl-0">
 							<div class="col-img  bg-overlay">
-								<div class="bg-section">
-									<img src="assets/images/background/bg-1.png" alt="Background" />
+								<div class="img-responsive center-block" style="overflow:hidden; background:#0b1516;" >
+									<img src="assets/images/background/bg-1.png"
+									 alt="Background"
+									 style="width:100%;
+                height:auto;
+                display:block;
+                filter: grayscale(100%) contrast(1.1) brightness(0.9) !important;
+                object-fit:cover;" />
 								</div>
+								
 							</div>
 						</div>
 						<!-- .col-md-6 end-->
@@ -705,8 +715,13 @@
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-5 pr-0 pl-0">
 							<div class="col-img">
-								<div class="bg-section">
-									<img src="assets/images/background/bg-2.png" alt="Background" />
+								<div class="img-responsive center-block">
+									<img src="assets/images/background/bg-2.png" alt="Background" 
+									style="width:100%;
+                height:auto;
+                display:block;
+                filter: grayscale(100%) contrast(1.1) brightness(0.9) !important;
+                object-fit:cover;" />
 								</div>
 							</div>
 						</div>
