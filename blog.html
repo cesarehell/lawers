@@ -39,17 +39,127 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20x%3D%276%27%20y%3D%2742%27%20width%3D%2740%27%20height%3D%278%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3Crect%20x%3D%2736%27%20y%3D%2718%27%20width%3D%2718%27%20height%3D%2712%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3Crect%20x%3D%2730%27%20y%3D%2722%27%20width%3D%276%27%20height%3D%2728%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3Crect%20x%3D%2722%27%20y%3D%2712%27%20width%3D%2718%27%20height%3D%2712%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3C%2Fsvg%3E" />
 
     <style>
-        .blog-details__meta {
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        @media (max-width: 991px) {
+            .blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 767px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+        .blog-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 18px 40px rgba(4, 23, 26, 0.08);
+            overflow: hidden;
+            height: 100%;
             display: flex;
-            gap: 18px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 48px rgba(4, 23, 26, 0.12);
+        }
+        .blog-card__img {
+            height: 180px;
+            overflow: hidden;
+        }
+        .blog-card__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .blog-card__body {
+            padding: 18px 20px 20px;
+        }
+        .blog-card__meta {
+            font-size: 12px;
+            color: var(--pitoon-gray);
+            margin-top: 6px;
+        }
+        .blog-card__title {
+            font-size: 18px;
+            line-height: 1.35;
+            margin: 6px 0 8px;
+            color: var(--pitoon-black);
+        }
+        .blog-card__excerpt {
             font-size: 14px;
             color: var(--pitoon-gray);
-            margin-bottom: 16px;
         }
-        .blog-details__img-box img { border-radius: 18px; }
-        .blog-details__content h4 { margin-top: 22px; }
-        .blog-details__content ul { margin-left: 20px; }
+    
+        .blog-card {
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            background: #ffffff;
+        }
+        .blog-card:focus-visible {
+            outline: 3px solid rgba(249, 190, 23, 0.45);
+            outline-offset: 2px;
+        }
+        .blog-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(4, 23, 26, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            z-index: 9999;
+        }
+        .blog-modal.is-open { display: flex; }
+        .blog-modal__dialog {
+            width: min(900px, 100%);
+            max-height: 90vh;
+            overflow: auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 24px 60px rgba(4, 23, 26, 0.25);
+            position: relative;
+        }
+        .blog-modal__close {
+            position: sticky;
+            top: 0;
+            float: right;
+            margin: 16px 16px 0 0;
+            background: #f3f1ec;
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+        }
+        .blog-modal__content {
+            padding: 10px 28px 28px;
+        }
+        .blog-modal__img {
+            max-width: 420px;
+            margin: 0 auto 16px;
+        }
+        .blog-modal__img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 14px;
+        }
+    
+    
+        .blog-card.is-placeholder {
+            visibility: hidden;
+            pointer-events: none;
+        }
+
     </style>
 </head>
 
@@ -141,83 +251,99 @@
         </div>
     </section>
 
+    
     <section class="blog-details" style="padding-top:80px;">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-10 col-lg-10">
-                    <div class="blog-details__left">
-                        <div class="blog-details__img-box">
-                            <img src="assets/images/background/bg-2.png" alt="Actualidad jurídica">
-                        </div>
-                        <div class="blog-details__content">
-                            <div class="blog-details__meta">
-                                <span><i class="fa-solid fa-user"></i> Equipo LAWMedic</span>
-                                <span><i class="fa-regular fa-calendar"></i> 2 de junio de 2023</span>
-                            </div>
-                            <h3 class="blog-details__title">Se eliminan 35 normas de salud</h3>
-                            <p class="blog-details__text-1" style="text-align:justify;">A través del <strong>Suplemento del Programa Nacional de Infraestructura de la Calidad 2023</strong>, publicado en el <strong>Diario Oficial de la Federación</strong> el 1 de junio de 2023, se eliminaron diversas Normas Oficiales Mexicanas (NOM) relacionadas con la salud.</p>
-
-                            <h4>Normas de salud eliminadas</h4>
-
-                            <h5>NOM-013-SSA2-2015</h5>
-                            <p><strong>Prevención y control de enfermedades bucales.</strong></p>
-                            <p>Establecía los criterios y procedimientos para la prevención, detección, diagnóstico y tratamiento de las enfermedades bucales más frecuentes. También regulaba las estrategias de vigilancia epidemiológica que debían aplicarse en todos los consultorios y establecimientos médicos del país.</p>
-
-                            <h5>NOM-025-SSA2-2014</h5>
-                            <p><strong>Prestación de servicios de salud en unidades de atención integral hospitalaria médico-psiquiátrica.</strong></p>
-                            <p>Definía los criterios de operación y organización de las unidades de atención psiquiátrica integral, garantizando la continuidad, calidad y respeto a los derechos humanos de los pacientes.</p>
-
-                            <h5>NOM-041-SSA2-2011</h5>
-                            <p><strong>Prevención, diagnóstico, tratamiento, control y vigilancia epidemiológica del cáncer de mama.</strong></p>
-                            <p>Establecía los lineamientos para la promoción de la salud, prevención, diagnóstico y vigilancia epidemiológica del cáncer de mama. Indicaba que la autoexploración debía promoverse a partir de los 20 años y que las acciones debían ser obligatorias para todo el personal del Sistema Nacional de Salud.</p>
-
-                            <h5>NOM-032-SSA3-2010</h5>
-                            <p><strong>Asistencia social. Prestación de servicios de asistencia social para niños, niñas y adolescentes en situación de riesgo y vulnerabilidad.</strong></p>
-                            <p>Definía las características y requisitos mínimos que debían observarse en establecimientos públicos o privados dedicados a la atención social de menores en situación de vulnerabilidad.</p>
-
-                            <h4>¿Cuál fue la prisa?</h4>
-                            <p>El artículo 29, párrafo cuarto de la <strong>Ley de Infraestructura de la Calidad</strong> establece que el Suplemento del Programa debe integrarse y publicarse cada año antes del 30 de agosto. Las autoridades normalizadoras tienen hasta el 30 de mayo para enviar propuestas de modificación, por lo que se aceleró la publicación para cumplir con los plazos legales.</p>
-
-                            <h4>¿Dónde quedarán esos derechos?</h4>
-                            <p>Es importante recordar el principio de <strong>progresividad</strong>, que impide eliminar una ley, norma o reglamento sin que se otorgue un mejor derecho en su lugar. La eliminación de estas NOM plantea interrogantes sobre la protección de los derechos en salud pública y la continuidad de las obligaciones normativas.</p>
-
-                            <h4>Normas vigentes a ser canceladas</h4>
-                            <ul>
-                                <li>NOM-029-SSA2-1999 – Leptospirosis en el humano.</li>
-                                <li>NOM-033-SSA2-2011 – Intoxicación por picadura de alacrán.</li>
-                                <li>NOM-038-SSA2-2010 – Enfermedades por deficiencia de yodo.</li>
-                                <li>PROY-NOM-042-SSA2-2017 – Especificaciones sanitarias para centros de prevención y control de zoonosis.</li>
-                                <li>PROY-NOM-050-SSA2-2018 – Fomento, protección y apoyo a la lactancia materna.</li>
-                                <li>NOM-043-SSA2-2012 – Promoción y educación para la salud en materia alimentaria.</li>
-                                <li>NOM-008-SSA3-2017 – Tratamiento integral del sobrepeso y la obesidad.</li>
-                                <li>NOM-015-SSA2-2010 – Prevención y control de la diabetes mellitus.</li>
-                                <li>NOM-030-SSA2-2009 – Hipertensión arterial sistémica.</li>
-                                <li>NOM-037-SSA2-2012 – Dislipidemias.</li>
-                                <li>NOM-006-SSA2-2013 – Tuberculosis.</li>
-                                <li>NOM-027-SSA2-2007 – Lepra.</li>
-                                <li>NOM-016-SSA2-2012 – Cólera.</li>
-                                <li>NOM-039-SSA2-2014 – Infecciones de transmisión sexual.</li>
-                                <li>NOM-032-SSA2-2014 – Enfermedades transmitidas por vector.</li>
-                                <li>NOM-028-SSA2-2009 – Prevención y control de adicciones.</li>
-                                <li>NOM-025-SSA2-2014 – Atención psiquiátrica integral.</li>
-                                <li>NOM-048-SSA2-2017 – Crecimiento prostático benigno y cáncer de próstata.</li>
-                                <li>NOM-049-SSA2-2017 – Osteoporosis.</li>
-                                <li>NOM-035-SSA2-2012 – Atención en perimenopausia y postmenopausia.</li>
-                                <li>NOM-031-SSA2-1999 – Atención a la salud del niño.</li>
-                                <li>NOM-047-SSA2-2015 – Atención a la salud del grupo etario de 10 a 19 años.</li>
-                                <li>NOM-041-SSA2-2011 – Cáncer de mama.</li>
-                                <li>NOM-032-SSA3-2010 – Asistencia social a niños y adolescentes en riesgo.</li>
-                            </ul>
-
-                            <p><strong>Fuente:</strong> <a href="https://www.dof.gob.mx/nota_detalle.php?codigo=5690732&fecha=01/06/2023#gsc.tab=0" target="_blank" rel="noreferrer">Diario Oficial de la Federación — Publicación del 1 de junio de 2023</a></p>
-                        </div>
+            <div class="blog-grid">
+                <button class="blog-card" type="button" data-open-modal="blog-1" aria-label="Se eliminan 35 normas de salud">
+                    <div class="blog-card__img">
+                        <img src="assets/images/services/service-3.svg" alt="Actualidad legal">
                     </div>
-                </div>
+                    <div class="blog-card__body">
+                        <div class="blog-card__meta">02/06/2023</div>
+                        <div class="blog-card__title">Se eliminan 35 normas de salud</div>
+                        <div class="blog-card__excerpt">Resumen de cambios recientes en NOM y cómo impactan a clínicas y profesionales de la salud.</div>
+                    </div>
+                </button>
             </div>
         </div>
     </section>
 
-    <footer class="site-footer">
+
+    
+    <div class="blog-modal" id="blog-1" role="dialog" aria-modal="true" aria-label="Artículo: Se eliminan 35 normas de salud">
+        <div class="blog-modal__dialog">
+            <button class="blog-modal__close" type="button" aria-label="Cerrar" data-close-modal="blog-1">&times;</button>
+            <div class="blog-modal__content">
+                <div class="blog-modal__img">
+                    <img src="assets/images/background/bg-2.png" alt="Actualidad jurídica">
+                </div>
+                <div class="blog-details__content">
+                    <div class="blog-details__meta">
+                        <span><i class="fa-solid fa-user"></i> Equipo LAWMedic</span>
+                        <span><i class="fa-regular fa-calendar"></i> 2 de junio de 2023</span>
+                    </div>
+                    <h3 class="blog-details__title">Se eliminan 35 normas de salud</h3>
+                    <p class="blog-details__text-1" style="text-align:justify;">A través del <strong>Suplemento del Programa Nacional de Infraestructura de la Calidad 2023</strong>, publicado en el <strong>Diario Oficial de la Federación</strong> el 1 de junio de 2023, se eliminaron diversas Normas Oficiales Mexicanas (NOM) relacionadas con la salud.</p>
+
+                    <h4>Normas de salud eliminadas</h4>
+
+                    <h5>NOM-013-SSA2-2015</h5>
+                    <p><strong>Prevención y control de enfermedades bucales.</strong></p>
+                    <p>Establecía los criterios y procedimientos para la prevención, detección, diagnóstico y tratamiento de las enfermedades bucales más frecuentes. También regulaba las estrategias de vigilancia epidemiológica que debían aplicarse en todos los consultorios y establecimientos médicos del país.</p>
+
+                    <h5>NOM-025-SSA2-2014</h5>
+                    <p><strong>Prestación de servicios de salud en unidades de atención integral hospitalaria médico-psiquiátrica.</strong></p>
+                    <p>Definía los criterios de operación y organización de las unidades de atención psiquiátrica integral, garantizando la continuidad, calidad y respeto a los derechos humanos de los pacientes.</p>
+
+                    <h5>NOM-041-SSA2-2011</h5>
+                    <p><strong>Prevención, diagnóstico, tratamiento, control y vigilancia epidemiológica del cáncer de mama.</strong></p>
+                    <p>Establecía los lineamientos para la promoción de la salud, prevención, diagnóstico y vigilancia epidemiológica del cáncer de mama. Indicaba que la autoexploración debía promoverse a partir de los 20 años y que las acciones debían ser obligatorias para todo el personal del Sistema Nacional de Salud.</p>
+
+                    <h5>NOM-032-SSA3-2010</h5>
+                    <p><strong>Asistencia social. Prestación de servicios de asistencia social para niños, niñas y adolescentes en situación de riesgo y vulnerabilidad.</strong></p>
+                    <p>Definía las características y requisitos mínimos que debían observarse en establecimientos públicos o privados dedicados a la atención social de menores en situación de vulnerabilidad.</p>
+
+                    <h4>¿Cuál fue la prisa?</h4>
+                    <p>El artículo 29, párrafo cuarto de la <strong>Ley de Infraestructura de la Calidad</strong> establece que el Suplemento del Programa debe integrarse y publicarse cada año antes del 30 de agosto. Las autoridades normalizadoras tienen hasta el 30 de mayo para enviar propuestas de modificación, por lo que se aceleró la publicación para cumplir con los plazos legales.</p>
+
+                    <h4>¿Dónde quedarán esos derechos?</h4>
+                    <p>Es importante recordar el principio de <strong>progresividad</strong>, que impide eliminar una ley, norma o reglamento sin que se otorgue un mejor derecho en su lugar. La eliminación de estas NOM plantea interrogantes sobre la protección de los derechos en salud pública y la continuidad de las obligaciones normativas.</p>
+
+                    <h4>Normas vigentes a ser canceladas</h4>
+                    <ul>
+                        <li>NOM-029-SSA2-1999 – Leptospirosis en el humano.</li>
+                        <li>NOM-033-SSA2-2011 – Intoxicación por picadura de alacrán.</li>
+                        <li>NOM-038-SSA2-2010 – Enfermedades por deficiencia de yodo.</li>
+                        <li>PROY-NOM-042-SSA2-2017 – Especificaciones sanitarias para centros de prevención y control de zoonosis.</li>
+                        <li>PROY-NOM-050-SSA2-2018 – Fomento, protección y apoyo a la lactancia materna.</li>
+                        <li>NOM-043-SSA2-2012 – Promoción y educación para la salud en materia alimentaria.</li>
+                        <li>NOM-008-SSA3-2017 – Tratamiento integral del sobrepeso y la obesidad.</li>
+                        <li>NOM-015-SSA2-2010 – Prevención y control de la diabetes mellitus.</li>
+                        <li>NOM-030-SSA2-2009 – Hipertensión arterial sistémica.</li>
+                        <li>NOM-037-SSA2-2012 – Dislipidemias.</li>
+                        <li>NOM-006-SSA2-2013 – Tuberculosis.</li>
+                        <li>NOM-027-SSA2-2007 – Lepra.</li>
+                        <li>NOM-016-SSA2-2012 – Cólera.</li>
+                        <li>NOM-039-SSA2-2014 – Infecciones de transmisión sexual.</li>
+                        <li>NOM-032-SSA2-2014 – Enfermedades transmitidas por vector.</li>
+                        <li>NOM-028-SSA2-2009 – Prevención y control de adicciones.</li>
+                        <li>NOM-025-SSA2-2014 – Atención psiquiátrica integral.</li>
+                        <li>NOM-048-SSA2-2017 – Crecimiento prostático benigno y cáncer de próstata.</li>
+                        <li>NOM-049-SSA2-2017 – Osteoporosis.</li>
+                        <li>NOM-035-SSA2-2012 – Atención en perimenopausia y postmenopausia.</li>
+                        <li>NOM-031-SSA2-1999 – Atención a la salud del niño.</li>
+                        <li>NOM-047-SSA2-2015 – Atención a la salud del grupo etario de 10 a 19 años.</li>
+                        <li>NOM-041-SSA2-2011 – Cáncer de mama.</li>
+                        <li>NOM-032-SSA3-2010 – Asistencia social a niños y adolescentes en riesgo.</li>
+                    </ul>
+
+                    <p><strong>Fuente:</strong> <a href="https://www.dof.gob.mx/nota_detalle.php?codigo=5690732&fecha=01/06/2023#gsc.tab=0" target="_blank" rel="noreferrer">Diario Oficial de la Federación — Publicación del 1 de junio de 2023</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer class="site-footer">
         <div class="site-footer__bg" style="background-image:url(assets/images/backgrounds/site-footer-bg.png);"></div>
         <div class="container">
             <div class="site-footer__top">
@@ -323,5 +449,52 @@
 <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
 <script src="assets/vendors/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
 <script src="assets/js/pitoon.js"></script>
+
+<script>
+    (function () {
+        const openButtons = document.querySelectorAll('[data-open-modal]');
+        const closeTargets = document.querySelectorAll('[data-close-modal]');
+        const modalRoots = document.querySelectorAll('.blog-modal');
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (!modal) return;
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (!modal) return;
+            modal.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        openButtons.forEach(btn => {
+            btn.addEventListener('click', () => openModal(btn.dataset.openModal));
+        });
+
+        modalRoots.forEach(modal => {
+            modal.addEventListener('click', (event) => {
+                if (event.target.closest('.blog-modal__dialog')) return;
+                closeModal(modal.id);
+            });
+        });
+
+        closeTargets.forEach(target => {
+            target.addEventListener('click', () => {
+                closeModal(target.dataset.closeModal);
+            });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key !== 'Escape') return;
+            document.querySelectorAll('.blog-modal.is-open').forEach(modal => {
+                closeModal(modal.id);
+            });
+        });
+    })();
+</script>
+
 </body>
 </html>
