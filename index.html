@@ -49,9 +49,37 @@
             background-position: center;
             filter: grayscale(20%) contrast(1.05) brightness(0.9);
         }
+        .main-slider__slide-lawmedic .thm-breadcrumb,
+        .main-slider__slide-lawmedic .thm-breadcrumb li,
+        .main-slider__slide-lawmedic .thm-breadcrumb li a,
+        .main-slider__slide-lawmedic .thm-breadcrumb span {
+            color: #ffffff !important;
+        }
         .section-title__title strong { color: var(--pitoon-black); }
         .services-grid .blog-one__single { height: 100%; }
         .services-grid .blog-one__title a { color: var(--pitoon-black); }
+        .services-grid .service-image {
+            width: 100%;
+            height: 180px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            display: block;
+            transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+        .services-grid .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .services-grid .service-image:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(4, 23, 26, 0.18);
+        }
+        @media (max-width: 767px) {
+            .services-grid .service-image { height: 150px; }
+        }
         .services-grid .service-icon {
             width: 56px;
             height: 56px;
@@ -326,6 +354,7 @@
             <div class="row g-4">
                 <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                     <div class="blog-one__single">
+                        <a class="service-image" href="servicio1.html" aria-label="Derecho sanitario"><img src="assets/images/services/service-1.svg" alt="Derecho sanitario"></a>
                         <div class="blog-one__content">
                             <div class="service-icon"><i class="fa-solid fa-gavel"></i></div>
                             <h3 class="blog-one__title"><a href="servicio1.html">Derecho sanitario</a></h3>
@@ -335,6 +364,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="150ms">
                     <div class="blog-one__single">
+                        <a class="service-image" href="servicio2.html" aria-label="Capacitaciones"><img src="assets/images/services/service-2.svg" alt="Capacitaciones"></a>
                         <div class="blog-one__content">
                             <div class="service-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
                             <h3 class="blog-one__title"><a href="servicio2.html">Capacitaciones</a></h3>
@@ -344,6 +374,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="200ms">
                     <div class="blog-one__single">
+                        <a class="service-image" href="servicio3.html" aria-label="Acreditación"><img src="assets/images/services/service-3.svg" alt="Acreditación"></a>
                         <div class="blog-one__content">
                             <div class="service-icon"><i class="fa-solid fa-hospital"></i></div>
                             <h3 class="blog-one__title"><a href="servicio3.html">Acreditación</a></h3>
@@ -353,6 +384,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="250ms">
                     <div class="blog-one__single">
+                        <a class="service-image" href="servicio4.html" aria-label="Consultoría regulatoria"><img src="assets/images/services/service-4.svg" alt="Consultoría regulatoria"></a>
                         <div class="blog-one__content">
                             <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
                             <h3 class="blog-one__title"><a href="servicio4.html">Consultoría regulatoria</a></h3>
@@ -362,6 +394,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="300ms">
                     <div class="blog-one__single">
+                        <a class="service-image" href="servicio5.html" aria-label="LAWMedic Empresarial"><img src="assets/images/services/service-5.svg" alt="LAWMedic Empresarial"></a>
                         <div class="blog-one__content">
                             <div class="service-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
                             <h3 class="blog-one__title"><a href="servicio5.html">LAWMedic Empresarial</a></h3>
@@ -371,6 +404,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="350ms">
                     <div class="blog-one__single">
+                        <a class="service-image" href="servicio6.html" aria-label="LAWMedic Plus"><img src="assets/images/services/service-6.svg" alt="LAWMedic Plus"></a>
                         <div class="blog-one__content">
                             <div class="service-icon"><i class="fa-solid fa-star"></i></div>
                             <h3 class="blog-one__title"><a href="servicio6.html">LAWMedic Plus</a></h3>

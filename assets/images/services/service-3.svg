@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1416"/>
+      <stop offset="1" stop-color="#2b3436"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg3)"/>
+  <circle cx="520" cy="80" r="90" fill="#f9be17" opacity="0.12"/>
+  <g transform="translate(210 70)" fill="none" stroke="#f9be17" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="0" width="220" height="200" rx="18"/>
+    <path d="M40 40h140"/>
+    <path d="M40 80h140"/>
+    <path d="M40 120h90"/>
+    <path d="M140 140l30 30 50-70"/>
+  </g>
+  <text x="40" y="320" fill="#ffffff" font-family="Manrope, sans-serif" font-size="22">Acreditación</text>
+</svg>

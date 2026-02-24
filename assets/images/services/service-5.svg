@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1516"/>
+      <stop offset="1" stop-color="#303f41"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg5)"/>
+  <circle cx="520" cy="80" r="90" fill="#f9be17" opacity="0.12"/>
+  <g transform="translate(190 90)" fill="none" stroke="#f9be17" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="40" width="260" height="140" rx="18"/>
+    <path d="M90 40v-20h80v20"/>
+    <path d="M30 90h200"/>
+    <path d="M30 130h160"/>
+  </g>
+  <text x="40" y="320" fill="#ffffff" font-family="Manrope, sans-serif" font-size="22">LAWMedic Empresarial</text>
+</svg>
