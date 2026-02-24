@@ -1,321 +1,327 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="author" content="zytheme" />
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description"
-            content="Multi-purpose Business html5 landing page">
-        <link href="assets/images/favicon/favicon.ico" rel="icon">
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>LAWMedic | Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Actualidad y análisis jurídico-sanitario." />
 
-        <link
-            href='http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CMerriweather:300,300i,400,400i,700,700i,900,900i'
-            rel='stylesheet' type='text/css'>
-        <link href="assets/css/external.css" rel="stylesheet">
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <title>Lawmedic | Abogados, Medicos, Salud</title>
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <body class="body-scroll">
-        <div id="wrapper" class="wrapper clearfix">
-            <header id="navbar-spy"
-                class="header header-1 header-transparent header-fixed">
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/pitoon-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="assets/vendors/ion.rangeSlider/css/ion.rangeSlider.min.css">
 
-                <nav id="primary-menu" class="navbar navbar-fixed-top">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button"
-                                class="navbar-toggle collapsed"
-                                data-toggle="collapse"
-                                data-target="#navbar-collapse-1"
-                                aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
+    <link rel="stylesheet" href="assets/css/pitoon.css" />
+    <link rel="stylesheet" href="assets/css/pitoon-responsive.css" />
 
-                            <a class="logo" href="index.html">
-                                <img class="logo-dark"
-                                    src="assets/images/logo/logo_lM.webp"
-                                    alt="appy Logo">
-                                <img class="logo-light"
-                                    src="assets/images/logo/logo_lM.webp"
-                                    alt="appy Logo">
-                            </a>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20x%3D%276%27%20y%3D%2742%27%20width%3D%2740%27%20height%3D%278%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3Crect%20x%3D%2736%27%20y%3D%2718%27%20width%3D%2718%27%20height%3D%2712%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3Crect%20x%3D%2730%27%20y%3D%2722%27%20width%3D%276%27%20height%3D%2728%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3Crect%20x%3D%2722%27%20y%3D%2712%27%20width%3D%2718%27%20height%3D%2712%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3C%2Fsvg%3E" />
+
+    <style>
+        .blog-details__meta {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--pitoon-gray);
+            margin-bottom: 16px;
+        }
+        .blog-details__img-box img { border-radius: 18px; }
+        .blog-details__content h4 { margin-top: 22px; }
+        .blog-details__content ul { margin-left: 20px; }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+    <header class="main-header">
+        <div class="main-header__top">
+            <div class="main-header__top-inner">
+                <div class="main-header__top-left">
+                    <ul class="list-unstyled main-header__contact-list">
+                        <li>
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <div class="text"><p><a href="mailto:contacto@lawmedic.mx">contacto@lawmedic.mx</a></p></div>
+                        </li>
+                        <li>
+                            <div class="icon"><i class="fas fa-map-marker"></i></div>
+                            <div class="text"><p>Boca del Río, Veracruz, México</p></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-header__top-right">
+                    <div class="main-header__social-box">
+                        <h4 class="main-header__social-title">Síguenos:</h4>
+                        <div class="main-header__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         </div>
-                        <div class="collapse navbar-collapse pull-right"
-                            id="navbar-collapse-1">
-                            <ul
-                                class="nav navbar-nav nav-pos-right navbar-left nav-split">
-                                <li class="active"><a data-scroll="scrollTo"
-                                        href="index.html">Inicio</a>
-                                </li>
-                                <li><a data-scroll="scrollTo"
-                                        href="index.html#about">Acerca De</a>
-                                    <li><a data-scroll="scrollTo"
-                                            href="index.html#feature2">Servicios</a>
-                                    </li>
-                                </li>
-                                <li><a data-scroll="scrollTo"
-                                        href="index.html#team">Equipo</a>
-                                </li>
-                                <li><a data-scroll="scrollTo"
-                                        href="index.html#testimonial">Testimonios</a>
-                                </li>
-                                <li><a href="index.html#banner">Contacto</a>
-                                </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-menu">
+            <div class="main-menu__wrapper">
+                <div class="main-menu__wrapper-inner">
+                    <div class="main-menu__left">
+                        <div class="main-menu__logo">
+                            <a href="index.html"><img src="assets/images/logo/logo_lM.webp" alt="LAWMedic" style="max-width:150px;height:auto;"></a>
+                        </div>
+                        <div class="main-menu__main-menu-box">
+                            <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                            <ul class="main-menu__list">
+                                <li><a href="index.html#inicio">Inicio</a></li>
+                                <li><a href="index.html#about">Quiénes Somos</a></li>
+                                <li><a href="index.html#services">Servicios</a></li>
+                                <li><a href="index.html#team">Equipo</a></li>
+                                <li><a href="index.html#plus">LAWMedic Plus</a></li>
+                                <li><a href="index.html#contacto">Contacto</a></li>
+                                <li><a href="blog.html">Blog</a></li>
                             </ul>
                         </div>
                     </div>
-                </nav>
-
-            </header>
-
-            <section id="page-title"
-                class="page-title bg-overlay bg-overlay-dark">
-                <div class="bg-section">
-                    <img src="assets/images/page-title/6.png"
-                        alt="Background" />
+                    <div class="main-menu__right">
+                        <div class="main-menu__call">
+                            <div class="main-menu__call-icon"><img src="assets/images/icon/main-menu-call-icon-1.png" alt=""></div>
+                            <div class="main-menu__call-content">
+                                <p class="main-menu__call-sub-title">Llámanos</p>
+                                <h5 class="main-menu__call-number"><a href="tel:+522299312385">+52 229 931 2385</a></h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div
-                            class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                            <div class="title text-center">
-                                <div class="title--content">
-                                    <div class="title--heading">
-                                        <h1>Blog</h1>
-                                    </div>
-                                </div>
-                            </div><!-- .title end -->
-                        </div><!-- .col-md-12 end -->
-                    </div><!-- .row end -->
-                </div><!-- .container end -->
-            </section><!-- #page-title end -->
+            </div>
+        </nav>
+    </header>
 
-<section id="blog" class="blog blog-single">
-  <!-- Estilos inline para el bloque -->
-  <style>
-    /* Asegura buen render sin depender del theme */
-    #blog .entry--img img { display:block; width:100%; height:auto; }
-    #blog .entry--content { text-align:justify; line-height:1.7; color:#333; }
-    #blog .entry--title h4 { margin-top:14px; margin-bottom:10px; }
-    #blog .entry--meta { margin:10px 0 6px; opacity:.8; }
-    #blog .entry--meta span { margin-right:10px; }
-    /* Si quieres aún más ancho en pantallas grandes, descomenta:
-    @media (min-width: 1400px){
-      #blog .container { width: 90%; max-width: 1400px; }
-    } */
-  </style>
-
-  <div class="container">
-    <div class="row">
-      <!-- Más ancho: 10/12 columnas y centrado con offset -->
-      <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
-        <div class="blog-entry">
-          <div class="entry--img">
-            <a href="#"><img src="assets/images/blog/grid/1.jpg" alt="entry image" /></a>
-          </div>
-
-          <div class="entry--meta">
-            <span>By: <a href="#">Steve Martin</a></span>
-            <span>2 de junio de 2023</span>
-          </div>
-
-          <div class="entry--title">
-            <h4><a href="#">SE ELIMINAN 35 NORMAS DE SALUD</a></h4>
-          </div>
-
-          <div class="entry--content">
-            <p>
-              A través del <strong>Suplemento del Programa Nacional de Infraestructura de la Calidad 2023</strong>,
-              publicado en el <strong>Diario Oficial de la Federación</strong> el 1 de junio de 2023, se eliminaron
-              diversas Normas Oficiales Mexicanas (NOM) relacionadas con la salud.
-            </p>
-
-            <h4>Normas de salud eliminadas</h4>
-
-            <h5>NOM-013-SSA2-2015</h5>
-            <p><strong>Prevención y control de enfermedades bucales.</strong></p>
-            <p>
-              Establecía los criterios y procedimientos para la prevención, detección, diagnóstico y tratamiento
-              de las enfermedades bucales más frecuentes. También regulaba las estrategias de vigilancia epidemiológica
-              que debían aplicarse en todos los consultorios y establecimientos médicos del país.
-            </p>
-
-            <h5>NOM-025-SSA2-2014</h5>
-            <p><strong>Prestación de servicios de salud en unidades de atención integral hospitalaria médico-psiquiátrica.</strong></p>
-            <p>
-              Definía los criterios de operación y organización de las unidades de atención psiquiátrica integral,
-              garantizando la continuidad, calidad y respeto a los derechos humanos de los pacientes.
-            </p>
-
-            <h5>NOM-041-SSA2-2011</h5>
-            <p><strong>Prevención, diagnóstico, tratamiento, control y vigilancia epidemiológica del cáncer de mama.</strong></p>
-            <p>
-              Establecía los lineamientos para la promoción de la salud, prevención, diagnóstico y vigilancia
-              epidemiológica del cáncer de mama. Indicaba que la autoexploración debía promoverse a partir de los 20 años
-              y que las acciones debían ser obligatorias para todo el personal del Sistema Nacional de Salud.
-            </p>
-
-            <h5>NOM-032-SSA3-2010</h5>
-            <p><strong>Asistencia social. Prestación de servicios de asistencia social para niños, niñas y adolescentes en situación de riesgo y vulnerabilidad.</strong></p>
-            <p>
-              Definía las características y requisitos mínimos que debían observarse en establecimientos públicos o
-              privados dedicados a la atención social de menores en situación de vulnerabilidad.
-            </p>
-
-            <h4>¿Cuál fue la prisa?</h4>
-            <p>
-              El artículo 29, párrafo cuarto de la <strong>Ley de Infraestructura de la Calidad</strong> establece que el
-              Suplemento del Programa debe integrarse y publicarse cada año antes del 30 de agosto. Las autoridades
-              normalizadoras tienen hasta el 30 de mayo para enviar propuestas de modificación, por lo que se aceleró la
-              publicación para cumplir con los plazos legales.
-            </p>
-
-            <h4>¿Dónde quedarán esos derechos?</h4>
-            <p>
-              Es importante recordar el principio de <strong>progresividad</strong>, que impide eliminar una ley, norma
-              o reglamento sin que se otorgue un mejor derecho en su lugar. La eliminación de estas NOM plantea
-              interrogantes sobre la protección de los derechos en salud pública y la continuidad de las obligaciones normativas.
-            </p>
-
-            <h4>Normas vigentes a ser canceladas</h4>
-            <ul style="margin-left:20px;">
-              <li>NOM-029-SSA2-1999 – Leptospirosis en el humano.</li>
-              <li>NOM-033-SSA2-2011 – Intoxicación por picadura de alacrán.</li>
-              <li>NOM-038-SSA2-2010 – Enfermedades por deficiencia de yodo.</li>
-              <li>PROY-NOM-042-SSA2-2017 – Especificaciones sanitarias para centros de prevención y control de zoonosis.</li>
-              <li>PROY-NOM-050-SSA2-2018 – Fomento, protección y apoyo a la lactancia materna.</li>
-              <li>NOM-043-SSA2-2012 – Promoción y educación para la salud en materia alimentaria.</li>
-              <li>NOM-008-SSA3-2017 – Tratamiento integral del sobrepeso y la obesidad.</li>
-              <li>NOM-015-SSA2-2010 – Prevención y control de la diabetes mellitus.</li>
-              <li>NOM-030-SSA2-2009 – Hipertensión arterial sistémica.</li>
-              <li>NOM-037-SSA2-2012 – Dislipidemias.</li>
-              <li>NOM-006-SSA2-2013 – Tuberculosis.</li>
-              <li>NOM-027-SSA2-2007 – Lepra.</li>
-              <li>NOM-016-SSA2-2012 – Cólera.</li>
-              <li>NOM-039-SSA2-2014 – Infecciones de transmisión sexual.</li>
-              <li>NOM-032-SSA2-2014 – Enfermedades transmitidas por vector.</li>
-              <li>NOM-028-SSA2-2009 – Prevención y control de adicciones.</li>
-              <li>NOM-025-SSA2-2014 – Atención psiquiátrica integral.</li>
-              <li>NOM-048-SSA2-2017 – Crecimiento prostático benigno y cáncer de próstata.</li>
-              <li>NOM-049-SSA2-2017 – Osteoporosis.</li>
-              <li>NOM-035-SSA2-2012 – Atención en perimenopausia y postmenopausia.</li>
-              <li>NOM-031-SSA2-1999 – Atención a la salud del niño.</li>
-              <li>NOM-047-SSA2-2015 – Atención a la salud del grupo etario de 10 a 19 años.</li>
-              <li>NOM-041-SSA2-2011 – Cáncer de mama.</li>
-              <li>NOM-032-SSA3-2010 – Asistencia social a niños y adolescentes en riesgo.</li>
-            </ul>
-
-            <p>
-              <strong>Fuente:</strong>
-              <a href="https://www.dof.gob.mx/nota_detalle.php?codigo=5690732&fecha=01/06/2023#gsc.tab=0" target="_blank">
-                Diario Oficial de la Federación — Publicación del 1 de junio de 2023
-              </a>
-            </p>
-          </div><!-- /.entry--content -->
-        </div><!-- /.blog-entry -->
-      </div>
+    <div class="stricky-header stricked-menu main-menu">
+        <div class="sticky-header__content"></div>
     </div>
-  </div>
-</section>
 
-
-
-            <footer id="footer" class="footer">
-                <!-- Widget Section -->
-                <div class="footer-widget">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Izquierda: Logo + descripción + redes -->
-                            <div
-                                class="col-xs-12 col-sm-6 col-md-4 footer--widget-about">
-                                <div class="footer--widget-content">
-                                    <img class="mb-20"
-                                        src="assets/images/logo//logo_lM.webp"
-                                        alt="logo">
-                                    <p>Consultoría médico-legal y sanitaria.
-                                        Cumplimiento normativo,
-                                        acreditación y capacitación para
-                                        clínicas y hospitales.</p>
-                                    <div class="social">
-                                        <a class="share-twitter" href="#"><i
-                                                class="fa fa-twitter"></i></a>
-                                        <a class="share-facebook" href="#"><i
-                                                class="fa fa-facebook"></i></a>
-                                        <a class="share-linkedin" href="#"><i
-                                                class="fa fa-linkedin"></i></a>
-                                        <a class="share-pinterest" href="#"><i
-                                                class="fa fa-pinterest-p"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Centro: Get in Touch -->
-                            <div
-                                class="col-xs-12 col-sm-6 col-md-4 footer--widget-contact">
-                                <div class="footer--widget-title">
-                                    <h5>Ponte En Contacto</h5>
-                                </div>
-                                <div class="footer--widget-content">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><i class="fa fa-map-marker"></i>
-                                            Veracruz, México</li>
-                                        <li><i class="fa fa-phone"></i> (229)
-                                            000 0000</li>
-                                        <li><i class="fa fa-envelope-o"></i>
-                                            contacto@lawmedic.mx</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Derecha: Mapa -->
-                            <div class="col-xs-12 col-sm-12 col-md-4">
-                                <div class="map-container">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44929.123456789!2d-96.130000!3d19.046000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c340abcd1234%3A0xabcdef1234567890!2sBoca+del+R%C3%ADo,+Veracruz+94150,+M%C3%A9xico!5e0!3m2!1ses!2smx!4v0000000000000!5m2!1ses!2smx"
-                                        width="100%" height="300"
-                                        style="border:0;" allowfullscreen
-                                        loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade">
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
+    <section class="main-slider">
+        <div class="main-slider__carousel">
+            <div class="item main-slider__slide-3">
+                <div class="main-slider__bg" style="background-image:url(assets/images/page-title/6.png);"></div>
+                <div class="page-header__shape-1 float-bob-x"><img src="assets/images/shapes/page-header-shape-1.png" alt=""></div>
+                <div class="page-header__shape-2 float-bob-x"><img src="assets/images/shapes/page-header-shape-2.png" alt=""></div>
+                <div class="page-header__shape-3 float-bob-y"><img src="assets/images/shapes/page-header-shape-3.png" alt=""></div>
+                <div class="container">
+                    <div class="page-header__inner">
+                        <ul class="thm-breadcrumb list-unstyled">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><span class="fa fa-angle-right"></span></li>
+                            <li>Blog</li>
+                        </ul>
+                        <h2>Actualidad jurídico-sanitaria</h2>
                     </div>
                 </div>
-
-                <!-- Copyright -->
-                <div class="footer--copyright">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 text--center">
-                                <span>
-                                    &copy; 2019 Corporativo LAWMedic (marca
-                                    registrada IMPI) - Todos los
-                                    derechos reservados. Powered by Aureostudio.
-                                    <br>
-                                    <a href="aviso-privacidad.html"
-                                        target="_blank"
-                                        style="color: #c9a062; text-decoration: none;">
-                                        Aviso de Privacidad
-                                    </a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            </div>
         </div>
+    </section>
 
-        <script src="assets/js/jquery-2.2.4.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/functions.js"></script>
-    </body>
+    <section class="blog-details" style="padding-top:80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 col-lg-10">
+                    <div class="blog-details__left">
+                        <div class="blog-details__img-box">
+                            <img src="assets/images/background/bg-2.png" alt="Actualidad jurídica">
+                        </div>
+                        <div class="blog-details__content">
+                            <div class="blog-details__meta">
+                                <span><i class="fa-solid fa-user"></i> Equipo LAWMedic</span>
+                                <span><i class="fa-regular fa-calendar"></i> 2 de junio de 2023</span>
+                            </div>
+                            <h3 class="blog-details__title">Se eliminan 35 normas de salud</h3>
+                            <p class="blog-details__text-1" style="text-align:justify;">A través del <strong>Suplemento del Programa Nacional de Infraestructura de la Calidad 2023</strong>, publicado en el <strong>Diario Oficial de la Federación</strong> el 1 de junio de 2023, se eliminaron diversas Normas Oficiales Mexicanas (NOM) relacionadas con la salud.</p>
+
+                            <h4>Normas de salud eliminadas</h4>
+
+                            <h5>NOM-013-SSA2-2015</h5>
+                            <p><strong>Prevención y control de enfermedades bucales.</strong></p>
+                            <p>Establecía los criterios y procedimientos para la prevención, detección, diagnóstico y tratamiento de las enfermedades bucales más frecuentes. También regulaba las estrategias de vigilancia epidemiológica que debían aplicarse en todos los consultorios y establecimientos médicos del país.</p>
+
+                            <h5>NOM-025-SSA2-2014</h5>
+                            <p><strong>Prestación de servicios de salud en unidades de atención integral hospitalaria médico-psiquiátrica.</strong></p>
+                            <p>Definía los criterios de operación y organización de las unidades de atención psiquiátrica integral, garantizando la continuidad, calidad y respeto a los derechos humanos de los pacientes.</p>
+
+                            <h5>NOM-041-SSA2-2011</h5>
+                            <p><strong>Prevención, diagnóstico, tratamiento, control y vigilancia epidemiológica del cáncer de mama.</strong></p>
+                            <p>Establecía los lineamientos para la promoción de la salud, prevención, diagnóstico y vigilancia epidemiológica del cáncer de mama. Indicaba que la autoexploración debía promoverse a partir de los 20 años y que las acciones debían ser obligatorias para todo el personal del Sistema Nacional de Salud.</p>
+
+                            <h5>NOM-032-SSA3-2010</h5>
+                            <p><strong>Asistencia social. Prestación de servicios de asistencia social para niños, niñas y adolescentes en situación de riesgo y vulnerabilidad.</strong></p>
+                            <p>Definía las características y requisitos mínimos que debían observarse en establecimientos públicos o privados dedicados a la atención social de menores en situación de vulnerabilidad.</p>
+
+                            <h4>¿Cuál fue la prisa?</h4>
+                            <p>El artículo 29, párrafo cuarto de la <strong>Ley de Infraestructura de la Calidad</strong> establece que el Suplemento del Programa debe integrarse y publicarse cada año antes del 30 de agosto. Las autoridades normalizadoras tienen hasta el 30 de mayo para enviar propuestas de modificación, por lo que se aceleró la publicación para cumplir con los plazos legales.</p>
+
+                            <h4>¿Dónde quedarán esos derechos?</h4>
+                            <p>Es importante recordar el principio de <strong>progresividad</strong>, que impide eliminar una ley, norma o reglamento sin que se otorgue un mejor derecho en su lugar. La eliminación de estas NOM plantea interrogantes sobre la protección de los derechos en salud pública y la continuidad de las obligaciones normativas.</p>
+
+                            <h4>Normas vigentes a ser canceladas</h4>
+                            <ul>
+                                <li>NOM-029-SSA2-1999 – Leptospirosis en el humano.</li>
+                                <li>NOM-033-SSA2-2011 – Intoxicación por picadura de alacrán.</li>
+                                <li>NOM-038-SSA2-2010 – Enfermedades por deficiencia de yodo.</li>
+                                <li>PROY-NOM-042-SSA2-2017 – Especificaciones sanitarias para centros de prevención y control de zoonosis.</li>
+                                <li>PROY-NOM-050-SSA2-2018 – Fomento, protección y apoyo a la lactancia materna.</li>
+                                <li>NOM-043-SSA2-2012 – Promoción y educación para la salud en materia alimentaria.</li>
+                                <li>NOM-008-SSA3-2017 – Tratamiento integral del sobrepeso y la obesidad.</li>
+                                <li>NOM-015-SSA2-2010 – Prevención y control de la diabetes mellitus.</li>
+                                <li>NOM-030-SSA2-2009 – Hipertensión arterial sistémica.</li>
+                                <li>NOM-037-SSA2-2012 – Dislipidemias.</li>
+                                <li>NOM-006-SSA2-2013 – Tuberculosis.</li>
+                                <li>NOM-027-SSA2-2007 – Lepra.</li>
+                                <li>NOM-016-SSA2-2012 – Cólera.</li>
+                                <li>NOM-039-SSA2-2014 – Infecciones de transmisión sexual.</li>
+                                <li>NOM-032-SSA2-2014 – Enfermedades transmitidas por vector.</li>
+                                <li>NOM-028-SSA2-2009 – Prevención y control de adicciones.</li>
+                                <li>NOM-025-SSA2-2014 – Atención psiquiátrica integral.</li>
+                                <li>NOM-048-SSA2-2017 – Crecimiento prostático benigno y cáncer de próstata.</li>
+                                <li>NOM-049-SSA2-2017 – Osteoporosis.</li>
+                                <li>NOM-035-SSA2-2012 – Atención en perimenopausia y postmenopausia.</li>
+                                <li>NOM-031-SSA2-1999 – Atención a la salud del niño.</li>
+                                <li>NOM-047-SSA2-2015 – Atención a la salud del grupo etario de 10 a 19 años.</li>
+                                <li>NOM-041-SSA2-2011 – Cáncer de mama.</li>
+                                <li>NOM-032-SSA3-2010 – Asistencia social a niños y adolescentes en riesgo.</li>
+                            </ul>
+
+                            <p><strong>Fuente:</strong> <a href="https://www.dof.gob.mx/nota_detalle.php?codigo=5690732&fecha=01/06/2023#gsc.tab=0" target="_blank" rel="noreferrer">Diario Oficial de la Federación — Publicación del 1 de junio de 2023</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="site-footer__bg" style="background-image:url(assets/images/backgrounds/site-footer-bg.png);"></div>
+        <div class="container">
+            <div class="site-footer__top">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="footer-widget__column footer-widget__about">
+                            <div class="footer-widget__logo"><a href="index.html"><img src="assets/images/logo/logo_lM.webp" alt="LAWMedic"></a></div>
+                            <p class="footer-widget__about-text">Consultoría médico-legal y sanitaria para clínicas, hospitales y empresas.</p>
+                            <div class="site-footer__social">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="footer-widget__column footer-widget__link">
+                            <div class="footer-widget__title-box"><h3 class="footer-widget__title">Explora</h3></div>
+                            <ul class="footer-widget__link-list list-unstyled">
+                                <li><a href="index.html#about">Quiénes somos</a></li>
+                                <li><a href="index.html#services">Servicios</a></li>
+                                <li><a href="index.html#team">Equipo</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="footer-widget__column footer-widget__Contact">
+                            <div class="footer-widget__title-box"><h3 class="footer-widget__title">Contacto</h3></div>
+                            <p class="footer-widget__Contact-text">Boca del Río, Veracruz, México</p>
+                            <ul class="footer-widget__Contact-list list-unstyled">
+                                <li><div class="icon"><span class="fas fa-envelope"></span></div><div class="text"><a href="mailto:contacto@lawmedic.mx">contacto@lawmedic.mx</a></div></li>
+                                <li><div class="icon"><span class="fas fa-phone-square"></span></div><div class="text"><a href="tel:+522299312385">+52 229 931 2385</a></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="footer-widget__column footer-widget__map">
+                            <div class="footer-widget__title-box"><h3 class="footer-widget__title">Ubicación</h3></div>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44929.123456789!2d-96.130000!3d19.046000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c340abcd1234%3A0xabcdef1234567890!2sBoca+del+R%C3%ADo,+Veracruz!5e0!3m2!1ses!2smx!4v0000000000000" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="site-footer__bottom-inner">
+                        <p class="site-footer__bottom-text">&copy; 2026 Corporativo LAWMedic — Marca registrada IMPI. Powered by Aureostudio. <a href="aviso-privacidad.html" style="color:inherit;text-decoration:underline;">Aviso de privacidad</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+        <div class="logo-box"><a href="index.html" aria-label="logo image"><img src="assets/images/logo/logo_lM.webp" width="155" alt="LAWMedic" /></a></div>
+        <div class="mobile-nav__container"></div>
+        <ul class="mobile-nav__contact list-unstyled">
+            <li><i class="fa fa-envelope"></i><a href="mailto:contacto@lawmedic.mx">contacto@lawmedic.mx</a></li>
+            <li><i class="fa fa-phone-alt"></i><a href="tel:+522299312385">+52 229 931 2385</a></li>
+        </ul>
+        <div class="mobile-nav__top">
+            <div class="mobile-nav__social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
+
+<script src="assets/vendors/jquery/jquery-3.6.4.min.js"></script>
+<script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendors/jarallax/jarallax.min.js"></script>
+<script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+<script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+<script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+<script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+<script src="assets/vendors/nouislider/nouislider.min.js"></script>
+<script src="assets/vendors/odometer/odometer.min.js"></script>
+<script src="assets/vendors/swiper/swiper.min.js"></script>
+<script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+<script src="assets/vendors/wnumb/wNumb.min.js"></script>
+<script src="assets/vendors/wow/wow.js"></script>
+<script src="assets/vendors/isotope/isotope.js"></script>
+<script src="assets/vendors/countdown/countdown.min.js"></script>
+<script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+<script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="assets/vendors/vegas/vegas.min.js"></script>
+<script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+<script src="assets/vendors/timepicker/timePicker.js"></script>
+<script src="assets/vendors/circleType/jquery.circleType.js"></script>
+<script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+<script src="assets/vendors/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+<script src="assets/js/pitoon.js"></script>
+</body>
 </html>

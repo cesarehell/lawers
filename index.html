@@ -1,811 +1,615 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>LAWMedic | Protección jurídico-sanitaria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Protección integral jurídico-sanitaria para clínicas, hospitales y profesionales de la salud." />
 
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="author" content="zytheme" />
-		<meta name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta name="description" content="Multi-purpose Business html5 landing page">
-		<link href="assets/images/favicon/favicon.ico" rel="icon">
-		<link
-			href='http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CMerriweather:300,300i,400,400i,700,700i,900,900i'
-			rel='stylesheet' type='text/css'>
-		<link href="assets/css/external.css" rel="stylesheet">
-		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-		<link href="assets/css/style.css" rel="stylesheet">
-		<title>Lawmedic | Abogados, Medicos, Salud</title>
+    <!-- Favicons --><!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-		<script>
-			function enviarWhatsApp(event) {
-				event.preventDefault();
+    <!-- Vendor CSS (Pitoon theme) -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/pitoon-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="assets/vendors/ion.rangeSlider/css/ion.rangeSlider.min.css">
 
-				const numero = "522299312385";
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/pitoon.css" />
+    <link rel="stylesheet" href="assets/css/pitoon-responsive.css" />
 
-				const nombre = document.getElementById("lm-name").value.trim();
-				const email = document.getElementById("lm-email").value.trim();
-				const servicio = document.getElementById("lm-service").value;
-				const mensaje = document.getElementById("lm-message").value.trim();
+    <!-- Overrides for LAWMedic -->
+    <style>
+        .main-slider__slide-lawmedic {
+            position: relative;
+        }
+        .main-slider__slide-lawmedic .main-slider__bg {
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(20%) contrast(1.05) brightness(0.9);
+        }
+        .section-title__title strong { color: var(--pitoon-black); }
+        .services-grid .blog-one__single { height: 100%; }
+        .services-grid .blog-one__title a { color: var(--pitoon-black); }
+        .services-grid .service-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--pitoon-black);
+            color: var(--pitoon-base);
+            display: grid;
+            place-items: center;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        .counter-box { text-align: center; }
+        .counter-box .odometer { font-size: 42px; color: var(--pitoon-black); }
+        .counter-box p { margin: 6px 0 0; font-weight: 600; }
+        .cta-lawmedic { background: var(--pitoon-black); color: #fff; border-radius: 20px; padding: 48px; position: relative; overflow: hidden; }
+        .cta-lawmedic:before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; }
+        .cta-lawmedic h2 { color: #fff; }
+        .cta-lawmedic .cta-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .cta-lawmedic .cta-actions .thm-btn {
+            min-width: 260px;
+            height: 54px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 12px;
+            margin: 0 !important;
+        }
+        .cta-lawmedic .cta-actions .thm-btn + .thm-btn {
+            margin-top: 16px !important;
+        }
+        .cta-lawmedic .cta-actions .thm-btn--ghost {
+            background: rgba(255, 255, 255, 0.12) !important;
+            color: #fff !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 12px;
+        }
+        #team .owl-nav,
+        #team .owl-nav button {
+            display: none !important;
+        }
+        @media (max-width: 767px) {
+            .cta-lawmedic .cta-actions {
+                align-items: flex-start;
+            }
+        }
+        .cta-lawmedic ul { margin: 0; padding: 0; list-style: none; }
+        .cta-lawmedic li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+        .cta-lawmedic li i { color: var(--pitoon-base); }
+        .contact__form-box .whatsapp-btn {
+            background: #25d366;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 12px;
+            border: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact__form-input-box select { height: 58px; border-radius: 12px; }
+    </style>
 
-				const texto =
-			`Hola, soy *${nombre}*.
-			Mi correo es: ${email}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('whatsappForm');
+            if (!form) return;
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim() || 'No proporcionado';
+                const service = document.getElementById('service').value.trim();
+                const message = document.getElementById('message').value.trim() || 'Sin mensaje adicional';
+                const whatsappMessage = `Hola, soy ${name}. Mi correo es ${email} y mi teléfono es ${phone}. Estoy interesado en el servicio: ${service}. Mensaje adicional: ${message}`;
+                const whatsappNumber = '522299312385';
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+                window.open(whatsappURL, '_blank');
+            });
+        });
+    </script>
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20x%3D%276%27%20y%3D%2742%27%20width%3D%2740%27%20height%3D%278%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3Crect%20x%3D%2736%27%20y%3D%2718%27%20width%3D%2718%27%20height%3D%2712%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3Crect%20x%3D%2730%27%20y%3D%2722%27%20width%3D%276%27%20height%3D%2728%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3Crect%20x%3D%2722%27%20y%3D%2712%27%20width%3D%2718%27%20height%3D%2712%27%20rx%3D%272%27%20fill%3D%27%2304171a%27%2F%3E%3C%2Fsvg%3E" />
+</head>
 
-			Estoy interesado en el servicio: *${servicio}*.
+<body>
+<div class="page-wrapper">
+    <header class="main-header">
+        <div class="main-header__top">
+            <div class="main-header__top-inner">
+                <div class="main-header__top-left">
+                    <ul class="list-unstyled main-header__contact-list">
+                        <li>
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <div class="text"><p><a href="mailto:contacto@lawmedic.mx">contacto@lawmedic.mx</a></p></div>
+                        </li>
+                        <li>
+                            <div class="icon"><i class="fas fa-map-marker"></i></div>
+                            <div class="text"><p>Boca del Río, Veracruz, México</p></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-header__top-right">
+                    <div class="main-header__social-box">
+                        <h4 class="main-header__social-title">Síguenos:</h4>
+                        <div class="main-header__social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-menu">
+            <div class="main-menu__wrapper">
+                <div class="main-menu__wrapper-inner">
+                    <div class="main-menu__left">
+                        <div class="main-menu__logo">
+                            <a href="#inicio"><img src="assets/images/logo/logo_lM.webp" alt="LAWMedic" style="max-width:150px;height:auto;"></a>
+                        </div>
+                        <div class="main-menu__main-menu-box">
+                            <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                            <ul class="main-menu__list">
+                                <li><a href="#inicio">Inicio</a></li>
+                                <li><a href="#about">Quiénes Somos</a></li>
+                                <li><a href="#services">Servicios</a></li>
+                                <li><a href="#team">Equipo</a></li>
+                                <li><a href="#plus">LAWMedic Plus</a></li>
+                                <li><a href="#contacto">Contacto</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-menu__right">
+                        <div class="main-menu__call">
+                            <div class="main-menu__call-icon">
+                                <img src="assets/images/icon/main-menu-call-icon-1.png" alt="">
+                            </div>
+                            <div class="main-menu__call-content">
+                                <p class="main-menu__call-sub-title">Llámanos</p>
+                                <h5 class="main-menu__call-number"><a href="tel:+522299312385">+52 229 931 2385</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-			Mensaje:
-			${mensaje}
+    <div class="stricky-header stricked-menu main-menu">
+        <div class="sticky-header__content"></div>
+    </div>
 
-			Enviado desde el formulario de LAWMedic.`;
+    <!-- Hero -->
+    <section id="inicio" class="main-slider">
+        <div class="main-slider__carousel">
+            <div class="item main-slider__slide-lawmedic">
+                <div class="main-slider__bg" style="background-image:url(assets/images/slider/slider-1.png);"></div>
+                <div class="container">
+                    <div class="page-header__inner">
+                        <h2>Corporativo LAWMedic</h2>
+                        <h2>Protección jurídico-sanitaria</h2>
+                        <ul class="thm-breadcrumb list-unstyled" style="color:#fff;">
+                            <li>Asesoría médica-legal</li>
+                            <li>Capacitación y cumplimiento</li>
+                            <li>Gestión sanitaria estratégica</li>
+                        </ul>
+                        <a class="thm-btn" href="#contacto" style="margin-top:18px;">Agenda una asesoría</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-				window.open(url, "_blank");
-}
-</script>
-	</head>
+    <!-- About -->
+    <section id="about" class="about-one" style="margin-bottom:40px;">
+        <div class="about-one__shape-2 img-bounce"><img src="assets/images/shapes/about-one-shape-2.png" alt=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="about-one__left">
+                        <div class="about-one__img-box">
+                            <div class="about-one__img">
+                                <img src="assets/images/slider/slider-2.png" alt="Equipo LAWMedic">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="about-one__right">
+                        <div class="section-title text-left">
+                            <div class="section-title__tagline-box">
+                                <span class="section-title__tagline">Quiénes somos</span>
+                                <div class="section-title__icon-box-1"><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i></div>
+                                <div class="section-title__icon-box-2"><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></div>
+                            </div>
+                            <h2 class="section-title__title">Protegemos la práctica médica con estrategia legal</h2>
+                        </div>
+                        <p class="about-one__text-2" style="text-align:justify;">Prevenimos riesgos presentes y futuros, brindando herramientas preventivas y correctivas respaldadas por equipos multidisciplinarios que combinan experiencia jurídica sanitaria con conocimiento clínico.</p>
+                        <ul class="list-unstyled">
+                            <li style="margin-bottom:16px;">
+                                <div class="about-one__icon-and-title">
+                                    <div class="about-one__icon"><span class="icon-down-right"></span></div>
+                                    <h4 class="about-one__title">Misión</h4>
+                                </div>
+                                <p class="about-one__points-text" style="text-align:justify;">Prevenir a nuestros clientes de problemas presentes y futuros, otorgando soluciones jurídicas y sanitarias que aseguren el cumplimiento normativo.</p>
+                            </li>
+                            <li>
+                                <div class="about-one__icon-and-title">
+                                    <div class="about-one__icon"><span class="icon-down-right"></span></div>
+                                    <h4 class="about-one__title">Visión</h4>
+                                </div>
+                                <p class="about-one__points-text" style="text-align:justify;">Alcanzar con excelencia cada rincón del país, dejando una huella positiva en la comunidad médica mediante modelos de protección innovadores y eficaces.</p>
+                            </li>
+                        </ul>
+                        <div class="about-one__btn-box">
+                            <a href="#contacto" class="about-one__btn thm-btn">Solicitar diagnóstico gratuito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<body class="body-scroll">
-		<div id="wrapper" class="wrapper clearfix">
-			<header id="navbar-spy"
-				class="header header-1 header-transparent header-fixed">
+    <!-- Counters -->
+    <section class="counter-one" style="padding:40px 0 10px;">
+        <div class="container">
+            <div class="row gutter-y-30">
+                <div class="col-md-3 col-6">
+                    <div class="counter-box">
+                        <div class="odometer" data-count="1500">0</div>
+                        <p>Clientes satisfechos</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="counter-box">
+                        <div class="odometer" data-count="800">0</div>
+                        <p>Audiencias</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="counter-box">
+                        <div class="odometer" data-count="3500">0</div>
+                        <p>Asesorías atendidas</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="counter-box">
+                        <div class="odometer" data-count="540">0</div>
+                        <p>Reconocimientos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<nav id="primary-menu" class="navbar navbar-fixed-top">
-					<div class="container">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed"
-								data-toggle="collapse" data-target="#navbar-collapse-1"
-								aria-expanded="false">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
+    <!-- Services -->
+    <section id="services" class="services-one" style="margin-top:30px;">
+        <div class="container services-grid">
+            <div class="section-title text-center">
+                <div class="section-title__tagline-box">
+                    <span class="section-title__tagline">Servicios</span>
+                    <div class="section-title__icon-box-1"><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i></div>
+                    <div class="section-title__icon-box-2"><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></div>
+                </div>
+                <h2 class="section-title__title">Cobertura jurídica integral</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__content">
+                            <div class="service-icon"><i class="fa-solid fa-gavel"></i></div>
+                            <h3 class="blog-one__title"><a href="servicio1.html">Derecho sanitario</a></h3>
+                            <p>Defensa y asesoría legal especializada para profesionales de la salud.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="150ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__content">
+                            <div class="service-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <h3 class="blog-one__title"><a href="servicio2.html">Capacitaciones</a></h3>
+                            <p>Programas continuos para cumplir y dominar la normatividad sanitaria.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__content">
+                            <div class="service-icon"><i class="fa-solid fa-hospital"></i></div>
+                            <h3 class="blog-one__title"><a href="servicio3.html">Acreditación</a></h3>
+                            <p>Acompañamiento para obtener acreditaciones de clínicas y hospitales ante COFEPRIS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="250ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__content">
+                            <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3 class="blog-one__title"><a href="servicio4.html">Consultoría regulatoria</a></h3>
+                            <p>Gestión y cumplimiento normativo sanitario para cualquier especialidad médica.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__content">
+                            <div class="service-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
+                            <h3 class="blog-one__title"><a href="servicio5.html">LAWMedic Empresarial</a></h3>
+                            <p>Blindaje legal para clínicas, hospitales y empresas del sector salud.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="350ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__content">
+                            <div class="service-icon"><i class="fa-solid fa-star"></i></div>
+                            <h3 class="blog-one__title"><a href="servicio6.html">LAWMedic Plus</a></h3>
+                            <p>Servicio anual integral: capacitación, avisos, auditorías y defensa 24/7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-							<a class="logo" href="index.html">
-								<img class="logo-dark" src="assets/images/logo/logo_lM.webp"
-									alt="appy Logo">
-								<img class="logo-light" src="assets/images/logo/logo_lM.webp"
-									alt="appy Logo">
-							</a>
-						</div>
-						<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
-							<ul class="nav navbar-nav nav-pos-right navbar-left nav-split">
-								<li class="active"><a data-scroll="scrollTo" href="#slider">Inicio</a>
-								</li>
-								<li><a data-scroll="scrollTo" href="#about">Acerca De</a>
-									<li><a data-scroll="scrollTo" href="#feature2">Servicios</a>
-									</li>
-								</li>
-								<li><a data-scroll="scrollTo" href="#team">Equipo</a>
-								</li>
-								<li><a data-scroll="scrollTo" href="#testimonial">Testimonios</a>
-								</li>
-								<li><a data-scroll="scrollTo" href="#banner">Contactanos</a>
-								</li>
-								<li><a href="blog.html">Blog</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
+    <!-- CTA Plus -->
+    <section id="plus" class="container" style="margin:80px auto;">
+        <div class="cta-lawmedic">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h2>LAWMedic Plus</h2>
+                    <p style="margin-bottom:16px;">Servicio anual integral de protección jurídica para tu práctica médica.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i><span>Capacitaciones ilimitadas para ti y tu equipo.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Tramitación de avisos de funcionamiento y privacidad.</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Auditorías bimestrales para asegurar cumplimiento normativo.</span></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 text-md-end text-start" style="margin-top:20px;">
+                    <div class="cta-actions">
+                        <a class="thm-btn" href="servicio6.html">Conoce el plan</a>
+                        <a class="thm-btn thm-btn--ghost" href="#contacto">Agenda una demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			</header>
-			<section id="slider" class="section slider">
-				<div class="slide--item bg-overlay bg-overlay-dark">
-					<div class="bg-section">
-						<img src="assets/images/slider/slider-1.png" alt="bg" style="display:block;
-            width:100%;
-            height:auto;
-            filter: grayscale(100%) contrast(1.1) brightness(0.9);">
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 text-center wow fadeInUp"
-								data-wow-duration="1s">
-								<div class="slide--headline">Bienvenido Al Corporativo LAWMedic</div>
-							</div>
-							<div
-								class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 text-center wow fadeInUp"
-								data-wow-duration="1s">
-								<div class="slide--bio">Protección integral jurídica sanitaria</div>
-							</div>
+    <!-- Team -->
+    <section id="team" class="team-one" style="padding-top:20px;">
+        <div class="container">
+            <div class="section-title text-center">
+                <div class="section-title__tagline-box">
+                    <span class="section-title__tagline">Equipo</span>
+                    <div class="section-title__icon-box-1"><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i></div>
+                    <div class="section-title__icon-box-2"><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></div>
+                </div>
+                <h2 class="section-title__title">Especialistas en derecho sanitario</h2>
+            </div>
+            <div class="team-one__carousel owl-carousel owl-theme thm-owl__carousel" data-owl-options='{
+                "loop": true,
+                "autoplay": true,
+                "margin": 30,
+                "nav": true,
+                "dots": true,
+                "smartSpeed": 1500,
+                "autoplayTimeout": 4000,
+                "navText": ["<span class=\"icon-left-arrow\"></span>", "<span class=\"icon-right-arrow\"></span>"],
+                "responsive": {"0":{"items":1},"768":{"items":2},"1200":{"items":3}}
+            }'>
+                <div class="team-one__single">
+                    <div class="team-one__img-box"><div class="team-one__img"><img src="assets/images/team/team-1.jpeg" alt=""></div></div>
+                    <div class="team-one__content"><h3 class="team-one__name">Yadira Hernández Acosta</h3><p class="team-one__sub-title">Coordinación CDMX</p></div>
+                </div>
+                <div class="team-one__single">
+                    <div class="team-one__img-box"><div class="team-one__img"><img src="assets/images/team/team-2.jpeg" alt=""></div></div>
+                    <div class="team-one__content"><h3 class="team-one__name">Jose Manuel Pegueros Reyes</h3><p class="team-one__sub-title">Enlace jurídico-administrativo</p></div>
+                </div>
+                <div class="team-one__single">
+                    <div class="team-one__img-box"><div class="team-one__img"><img src="assets/images/team/team-3.jpeg" alt=""></div></div>
+                    <div class="team-one__content"><h3 class="team-one__name">Rafael Chapol Tepox</h3><p class="team-one__sub-title">Coordinación general</p></div>
+                </div>
+                <div class="team-one__single">
+                    <div class="team-one__img-box"><div class="team-one__img"><img src="assets/images/team/team-4.jpeg" alt=""></div></div>
+                    <div class="team-one__content"><h3 class="team-one__name">Delia Vanessa Aguilar Sánchez</h3><p class="team-one__sub-title">Tramitación sanitaria</p></div>
+                </div>
+                <div class="team-one__single">
+                    <div class="team-one__img-box"><div class="team-one__img"><img src="assets/images/team/team-5.jpeg" alt=""></div></div>
+                    <div class="team-one__content"><h3 class="team-one__name">Nayeli Ramos Lerdo</h3><p class="team-one__sub-title">Calidad administrativa</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-						</div>
-						<!-- .row end -->
-					</div>
-					<!-- .container end -->
-				</div>
-				<!-- .slide-item end -->
-			</section>
+    <!-- Contact -->
+    <section id="contacto" class="contact">
+        <div class="contact__shape-1"><img src="assets/images/shapes/contact-shape-1.png" alt=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="contact__left"><div class="contact__img"><img src="assets/images/background/bg-1.png" alt=""></div></div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="contact__right">
+                        <div class="contact__shape-2"></div>
+                        <div class="contact__shape-3 float-bob-x"><img src="assets/images/shapes/contact-shape-3.png" alt=""></div>
+                        <div class="section-title text-left">
+                            <div class="section-title__tagline-box">
+                                <span class="section-title__tagline">Contacto</span>
+                                <div class="section-title__icon-box-1"><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i></div>
+                                <div class="section-title__icon-box-2"><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></div>
+                            </div>
+                            <h2 class="section-title__title">Agenda una consulta</h2>
+                        </div>
+                        <div class="contact__form-box">
+                            <form id="whatsappForm">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6"><div class="contact__form-input-box"><input type="text" id="name" placeholder="Nombre" required></div></div>
+                                    <div class="col-xl-6 col-lg-6"><div class="contact__form-input-box"><input type="email" id="email" placeholder="Email" required></div></div>
+                                    <div class="col-xl-6 col-lg-6"><div class="contact__form-input-box"><input type="text" id="phone" placeholder="Teléfono"></div></div>
+                                    <div class="col-xl-6 col-lg-6"><div class="contact__form-input-box">
+                                        <select class="selectpicker" id="service" aria-label="Selecciona un servicio">
+                                            <option value="Derecho sanitario">Derecho sanitario</option>
+                                            <option value="Capacitaciones">Capacitaciones</option>
+                                            <option value="Acreditación">Acreditación</option>
+                                            <option value="Consultoría regulatoria">Consultoría regulatoria</option>
+                                            <option value="LAWMedic Empresarial">LAWMedic Empresarial</option>
+                                            <option value="LAWMedic Plus">LAWMedic Plus</option>
+                                        </select>
+                                    </div></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="contact__form-input-box text-message-box"><textarea id="message" placeholder="Cuéntanos qué necesitas"></textarea></div>
+                                        <div class="contact__btn-box" style="text-align:right;"><button type="submit" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Enviar</button></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<section id="counter1" class="counter">
-				<div class="container">
-					<div class="counter-container">
-						<div class="row">
-							<div class="col-xs-12 col-sm-6 col-md-3">
-								<div class="count-box">
-									<div class="count-icon">
-										<i class="icon icon-noun_740327_cc"></i>
-									</div>
-									<div class="count-content">
-										<div class="counting">1500</div>
-										<div class="count-title">Clientes Satisfechos</div>
-									</div>
-								</div>
-							</div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer__bg" style="background-image:url(assets/images/backgrounds/site-footer-bg.png);"></div>
+        <div class="container">
+            <div class="site-footer__top">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="footer-widget__column footer-widget__about">
+                            <div class="footer-widget__logo"><a href="#inicio"><img src="assets/images/logo/logo_lM.webp" alt="LAWMedic"></a></div>
+                            <p class="footer-widget__about-text">Consultoría médico-legal y sanitaria para clínicas, hospitales y empresas.</p>
+                            <div class="site-footer__social">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="footer-widget__column footer-widget__link">
+                            <div class="footer-widget__title-box"><h3 class="footer-widget__title">Explora</h3></div>
+                            <ul class="footer-widget__link-list list-unstyled">
+                                <li><a href="#about">Quiénes somos</a></li>
+                                <li><a href="#services">Servicios</a></li>
+                                <li><a href="#team">Equipo</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="footer-widget__column footer-widget__Contact">
+                            <div class="footer-widget__title-box"><h3 class="footer-widget__title">Contacto</h3></div>
+                            <p class="footer-widget__Contact-text">Boca del Río, Veracruz, México</p>
+                            <ul class="footer-widget__Contact-list list-unstyled">
+                                <li><div class="icon"><span class="fas fa-envelope"></span></div><div class="text"><a href="mailto:contacto@lawmedic.mx">contacto@lawmedic.mx</a></div></li>
+                                <li><div class="icon"><span class="fas fa-phone-square"></span></div><div class="text"><a href="tel:+522299312385">+52 229 931 2385</a></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="footer-widget__column footer-widget__map">
+                            <div class="footer-widget__title-box"><h3 class="footer-widget__title">Ubicación</h3></div>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44929.123456789!2d-96.130000!3d19.046000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c340abcd1234%3A0xabcdef1234567890!2sBoca+del+R%C3%ADo,+Veracruz!5e0!3m2!1ses!2smx!4v0000000000000" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="site-footer__bottom-inner">
+                        <p class="site-footer__bottom-text">&copy; 2026 Corporativo LAWMedic — Marca registrada IMPI. Powered by Aureostudio. <a href="aviso-privacidad.html" style="color:inherit;text-decoration:underline;">Aviso de privacidad</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 
-							<div class="col-xs-12 col-sm-6 col-md-3">
-								<div class="count-box">
-									<div class="count-icon">
-										<i class="icon icon-noun_740337_cc"></i>
-									</div>
-									<div class="count-content">
-										<div class="counting">800</div>
-										<div class="count-title">Audencias</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3">
-								<div class="count-box">
-									<div class="count-icon">
-										<i class="icon icon-noun_740291_cc"></i>
-									</div>
-									<div class="count-content">
-										<div class="counting">3500</div>
-										<div class="count-title">Asesorías Atendidas</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3">
-								<div class="count-box">
-									<div class="count-icon">
-										<i class="icon icon-noun_740322_cc"></i>
-									</div>
-									<div class="count-content">
-										<div class="counting">540</div>
-										<div class="count-title">Premios?</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+<!-- Mobile Menu -->
+<div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+        <div class="logo-box"><a href="#inicio" aria-label="logo image"><img src="assets/images/logo/logo_lM.webp" width="155" alt="LAWMedic" /></a></div>
+        <div class="mobile-nav__container"></div>
+        <ul class="mobile-nav__contact list-unstyled">
+            <li><i class="fa fa-envelope"></i><a href="mailto:contacto@lawmedic.mx">contacto@lawmedic.mx</a></li>
+            <li><i class="fa fa-phone-alt"></i><a href="tel:+522299312385">+52 229 931 2385</a></li>
+        </ul>
+        <div class="mobile-nav__top">
+            <div class="mobile-nav__social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
 
-			<section id="about" class="section about pb-0">
-				<div class="container">
-					<div class="row align-items-center">
-						<!-- Imagen lateral -->
-						<div class="col-xs-12 col-sm-12 col-md-5 wow fadeInUp">
-							<img class="img-responsive center-block"
-								src="assets/images/slider/slider-2.png" alt="Equipo LAWMedic" style="display:block;
-            width:100%;
-            height:auto;
-            filter: grayscale(100%) contrast(1.1) brightness(0.9);"/>
-						</div>
+<a href="#inicio" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
 
-						<!-- Contenido -->
-						<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1">
-							<div class="heading heading-1 mt-70 wow fadeInUp" data-wow-duration="1s">
-								<h2 class="heading--title">Quiénes Somos</h2>
-								<div class="heading--divider"></div>
-							</div>
-
-							<div class="about-content wow fadeInUp" data-wow-duration="1s">
-								<h6>Misión</h6>
-								<p style="text-align: justify;">
-									Prevenir a nuestros clientes de problemas presentes y futuros,
-									otorgando herramientas
-									de apoyo preventivo y correctivo con respaldo de equipos
-									multidisciplinarios que
-									combinan sus conocimientos científicos y técnicos con la disciplina
-									jurídica sanitaria
-									y estratégica.
-								</p>
-
-								<h6>Visión</h6>
-								<p style="text-align: justify;">
-									Alcanzar con excelencia cada rincón del país, dejando una huella
-									positiva en nuestros
-									clientes y en la comunidad médica en general. Promovemos modelos de
-									protección jurídica
-									innovadores y eficaces, respaldados por los mejores especialistas en el
-									ámbito legal
-									sanitario.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="feature2"
-				class="section feature feature-2 feature-left bg-white mb-60">
-				<div class="container">
-					<div class="row clearfix">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-							<div class="heading heading-1 text--center wow fadeInUp"
-								data-wow-duration="1s">
-								<h2 class="heading--title">Servicios</h2>
-								<p class="heading--desc">Asesoría médica-legal y sanitaria para
-									clínicas, hospitales y empresas.</p>
-								<div class="heading--divider mb-80 heading--center"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<!-- Panel #1 -->
-						<div class="col-xs-12 col-sm-12 col-md-4">
-							<div class="feature-panel wow fadeInUp" data-wow-duration="1s">
-								<a href="servicio1.html" class="feature--icon"
-									aria-label="Ir a Derecho Sanitario">
-									<i class="icon icon-noun_740324_cc"></i>
-								</a>
-								<div class="feature--content">
-									<a href="servicio1.html" style="color:inherit; text-decoration:none;">
-										<h3>Derecho Sanitario</h3>
-										<p>Protegemos a profesionales de la salud con nuestro servicio
-											especializado en asesoría y defensa legal en el ámbito médico.</p>
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- Panel #2 -->
-						<div class="col-xs-12 col-sm-12 col-md-4">
-							<div class="feature-panel wow fadeInUp" data-wow-duration="1s">
-								<a href="servicio2.html" class="feature--icon"
-									aria-label="Ir a Capacitaciones">
-									<i class="icon icon-noun_740303_cc"></i>
-								</a>
-								<div class="feature--content">
-									<a href="servicio2.html" style="color:inherit; text-decoration:none;">
-										<h3>Capacitaciones</h3>
-										<p>Impulsamos el conocimiento y cumplimiento normativo en el ámbito
-											médico.</p>
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- Panel #3 -->
-						<div class="col-xs-12 col-sm-12 col-md-4">
-							<div class="feature-panel wow fadeInUp" data-wow-duration="1s">
-								<a href="servicio3.html" class="feature--icon"
-									aria-label="Ir a Acreditación para Clínicas y Hospitales">
-									<i class="icon icon-noun_741284_cc"></i>
-								</a>
-								<div class="feature--content">
-									<a href="servicio3.html" style="color:inherit; text-decoration:none;">
-										<h3>Acreditación Para Clínicas Y Hospitales</h3>
-										<p>Apoyamos a clínicas y hospitales en el proceso de obtención de
-											acreditaciones médicas ante COFEPRIS.</p>
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- Panel #4 -->
-						<div class="col-xs-12 col-sm-12 col-md-4">
-							<div class="feature-panel wow fadeInUp" data-wow-duration="1s">
-								<a href="servicio4.html" class="feature--icon"
-									aria-label="Ir a Consultoría y Regulación Sanitaria">
-									<i class="icon icon-noun_741298_cc"></i>
-								</a>
-								<div class="feature--content">
-									<a href="servicio4.html" style="color:inherit; text-decoration:none;">
-										<h3>Consultoría Y Regulación Sanitaria</h3>
-										<p>Brindamos asesoría experta en regulación sanitaria para
-											profesionales de la salud.</p>
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- Panel #5 -->
-						<div class="col-xs-12 col-sm-12 col-md-4">
-							<div class="feature-panel wow fadeInUp" data-wow-duration="1s">
-								<a href="servicio5.html" class="feature--icon"
-									aria-label="Ir a LAWMedic Empresarial">
-									<i class="icon icon-noun_740303_cc"></i>
-								</a>
-								<div class="feature--content">
-									<a href="servicio5.html" style="color:inherit; text-decoration:none;">
-										<h3>LAWMedic Empresarial</h3>
-										<p>Protegemos legalmente a tu empresa en el sector médico.</p>
-									</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- Panel #6 -->
-						<div class="col-xs-12 col-sm-12 col-md-4">
-							<div class="feature-panel wow fadeInUp" data-wow-duration="1s">
-								<a href="servicio6.html" class="feature--icon"
-									aria-label="Ir a LAWMedic Plus">
-									<i class="icon icon-noun_740314_cc"></i>
-								</a>
-								<div class="feature--content">
-									<a href="servicio6.html" style="color:inherit; text-decoration:none;">
-										<h3>LAWMedic Plus</h3>
-										<p>El servicio integral anual de protección jurídica diseñado
-											especialmente para ti.</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</section>
-			
-			<section id="team" class="team team-1">
-	<div class="container">
-		<div class="row clearfix">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-				<div class="heading heading-1 text--center wow fadeInUp" data-wow-duration="1s">
-					<h2 class="heading--title">Abogados Experimentados</h2>
-					<p class="heading--desc">
-						Contamos con un equipo de especialistas en derecho sanitario y médico-legal con amplia experiencia.
-					</p>
-					<div class="heading--divider mb-80 heading--center"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12">
-				<!-- Carrusel de equipo (igual estilo que testimonios) -->
-				<div class="carousel" data-slide="3" data-slide-res="2"
-					 data-autoplay="true" data-nav="false" data-dots="false"
-					 data-space="30" data-loop="true" data-speed="800">
-
-					<!-- Member #1 -->
-					<div class="member">
-						<div class="member-img">
-							<img src="assets/images/team/team-1.jpeg" alt="member" style="display:block;
-            width:100%;
-            height:auto;
-            filter: grayscale(100%) contrast(1.1) brightness(0.9);" />
-						</div>
-						<div class="member-info">
-							<h5>Yadira Hernández Acosta</h5>
-							<h6>Coordinación en CDMX</h6>
-						</div>
-					</div>
-
-					<!-- Member #2 -->
-					<div class="member">
-						<div class="member-img">
-							<img src="assets/images/team/team-2.jpeg" alt="member" style="display:block;
-            width:100%;
-            height:auto;
-            filter: grayscale(100%) contrast(1.1) brightness(0.9);"/>
-						</div>
-						<div class="member-info">
-							<h5>Jose Manuel Pegueros Reyes</h5>
-							<h6>Enlace Jurídico-Administrativo</h6>
-						</div>
-					</div>
-
-					<!-- Member #3 -->
-					<div class="member">
-						<div class="member-img">
-							<img src="assets/images/team/team-3.jpeg" alt="member" style="display:block;
-            width:100%;
-            height:auto;
-            filter: grayscale(100%) contrast(1.1) brightness(0.9);" />
-						</div>
-						<div class="member-info">
-							<h5>Rafael Chapol Tepox</h5>
-							<h6>Coordinación General</h6>
-						</div>
-					</div>
-
-					<!-- Member #4 -->
-					<div class="member">
-						<div class="member-img">
-							<img src="assets/images/team/team-4.jpeg" alt="member" style="display:block;
-            width:100%;
-            height:auto;
-            filter: grayscale(100%) contrast(1.1) brightness(0.9);" />
-						</div>
-						<div class="member-info">
-							<h5>Delia Vanessa Aguilar Sánchez</h5>
-							<h6>Tramitación Sanitaria y Proyectos</h6>
-						</div>
-					</div>
-
-					<!-- Member #5 -->
-					<div class="member">
-						<div class="member-img">
-							<img src="assets/images/team/team-5.jpeg" alt="member" style="display:block;
-            width:100%;
-            height:auto;
-            filter: grayscale(100%) contrast(1.1) brightness(0.9);"/>
-						</div>
-						<div class="member-info">
-							<h5>Nayeli Ramos Lerdo</h5>
-							<h6>Calidad Administrativa</h6>
-						</div>
-					</div>
-
-				</div> <!-- .carousel end -->
-			</div>
-		</div>
-	</div>
-</section>
-
-
-			<section id="banner3" class="bg-white pt-0 pb-0">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-5 pr-0 pl-0">
-							<div class="col-img  bg-overlay">
-								<div class="img-responsive center-block" style="overflow:hidden; background:#0b1516;" >
-									<img src="assets/images/background/bg-1.png"
-									 alt="Background"
-									 style="width:100%;
-                height:auto;
-                display:block;
-                filter: grayscale(100%) contrast(1.1) brightness(0.9) !important;
-                object-fit:cover;" />
-								</div>
-								
-							</div>
-						</div>
-						<!-- .col-md-6 end-->
-						<div class="col-xs-12 col-sm-12 col-md-7 col-content pl-100">
-							<div class="row clearfix">
-								<div class="col-xs-12 col-sm-12 col-md-12">
-									<div class="heading heading-1 wow fadeInUp" data-wow-duration="1s">
-										<h2 class="heading--title">Conoce LAWMedic plus</h2>
-										<p style="text-align: justify;" class="heading--desc">El servicio
-											integral anual de protección jurídica diseñado especialmente para ti.
-
-											Un servicio compatible con cualquier tipo de póliza de
-											responsabilidad civil, cuyo objetivo principal es garantizar el
-											cumplimiento normativo de tu actividad médica y prevenir sanciones de
-											autoridades sanitarias,
-
-											administrativas y jurídicas.</p>
-										<div class="heading--divider mb-80"></div>
-									</div>
-								</div>
-								<!-- .col-md-6 end -->
-							</div>
-							<!-- .row end -->
-							<div class="row mb-50">
-								<!-- Panel #1 -->
-								<div class="col-xs-12 col-sm-6 col-md-6">
-									<div class="feature-panel">
-										<div class="feature--icon">
-											<i class="icon icon-noun_740300_cc"></i>
-										</div>
-										<div class="feature--content">
-											<h3>Capacitación.</h3>
-											<p>LCapacitaciones ilimitadas para el cliente y su personal directo.
-												Asesorías jurídicas personalizadas.</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-6">
-									<div class="feature-panel">
-										<div class="feature--icon">
-											<i class="icon icon-noun_741355_cc"></i>
-										</div>
-										<div class="feature--content">
-											<h3>Gestión</h3>
-											<p>Tramitación del Aviso de funcionamiento para consultorios médicos.
-												Elaboración, instalación y capacitación de aviso de privacidad
-												sanitario.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-6">
-									<div class="feature-panel">
-										<div class="feature--icon">
-											<i class="icon icon-noun_740296_cc"></i>
-										</div>
-										<div class="feature--content">
-											<h3>Auditoría.</h3>
-											<p>Auditorías bimestrales para verificar el cumplimiento de las
-												normas vigentes.</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-6">
-									<div class="feature-panel">
-										<div class="feature--icon">
-											<i class="icon icon-noun_741305_cc"></i>
-										</div>
-										<div class="feature--content">
-											<h3>24/7</h3>
-											<p>Atención a casos legales urgentes 24/7 los 365 días del año.</p>
-										</div>
-									</div>
-									<!-- .feature-panel end -->
-								</div>
-								<!-- .col-md-4 end -->
-							</div>
-							<!-- .row end -->
-						</div>
-					</div>
-					<!-- .row end -->
-				</div>
-				<!-- .container end -->
-			</section>
-
-			<section id="testimonial" class="testimonial">
-				<div class="container">
-					<div class="row clearfix">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-							<div class="heading heading-1 text--center wow fadeInUp"
-								data-wow-duration="1s">
-								<h2 class="heading--title">Testimonios</h2>
-								<p class="heading--desc">La gratitud de nuestros clientes es lo más
-									importante para nosotros.</p>
-								<div class="heading--divider mb-80 heading--center"></div>
-							</div>
-						</div>
-						<!-- .col-md-6 end -->
-					</div>
-					<!-- .row end -->
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12">
-							<div class="carousel" data-slide="3" data-slide-res="2"
-								data-autoplay="true" data-nav="false" data-dots="false" data-space="30"
-								data-loop="true" data-speed="800">
-								<!-- Testimonial #1 -->
-								<div class="testimonial-panel">
-									<div class="testimonial--meta-img">
-										<img src="assets/images/clients/pheni.webp" alt="Testimonial Author">
-									</div>
-									<div class="testimonial--body">
-										<p>“Somos una clínica que ha crecido en el Puerto de Veracruz, y el
-											apoyo de Lawmedic para lograr permisos y mejorar procesos ha sido
-											fundamental" Gracias Atte. Administración”</p>
-									</div>
-									<!-- .testimonial-body end -->
-									<div class="testimonial--meta">
-										<h4><span>-</span>Pheani</h4>
-									</div>
-								</div>
-								<div class="testimonial-panel">
-									<div class="testimonial--meta-img">
-										<img src="assets/images/clients/ucapre.webp" alt="Testimonial Author">
-									</div>
-									<div class="testimonial--body">
-										<p>“Ser una clínica pequeña, no significa que no cumplamos con la
-											normativa Sanitaria, gracias a Lawmedic aprendimos la importancia de
-											tener todo en orden y al personal capacitado”</p>
-									</div>
-									<!-- .testimonial-body end -->
-									<div class="testimonial--meta">
-										<h4><span>-</span> UCAPRE</h4>
-									</div>
-									<!-- .testimonial-meta end -->
-								</div>
-								<!-- .testimonial-panel end -->
-
-								<!-- Testimonial #3 -->
-								<div class="testimonial-panel">
-									<div class="testimonial--meta-img">
-										<img src="assets/images/clients/faicic.webp" alt="Testimonial Author">
-									</div>
-									<div class="testimonial--body">
-										<p>“La investigación como innovación médica está llena de retos,
-											Lawmedic nos ha enseñado a cumplir cabalmente con las normativas y a
-											organizar la operación de manera legal.”</p>
-									</div>
-									<!-- .testimonial-body end -->
-									<div class="testimonial--meta">
-										<h4><span>-</span>FAICIC</h4>
-									</div>
-									<!-- .testimonial-meta end -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="clients" class="clients clients-carousel bg-theme">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12">
-							<div class="carousel carousel-dots" data-slide="5" data-slide-res="2"
-								data-autoplay="false" data-nav="false" data-dots="false" data-space="30"
-								data-loop="true" data-speed="800">
-								<!-- Client #1 -->
-								<div class="client">
-									<img class="center-block" src="assets/images/clients/rinoface.webp"
-										alt="client">
-								</div>
-
-								<!-- Client #2 -->
-								<div class="client">
-									<img class="center-block" src="assets/images/clients/gcb.webp"
-										alt="client">
-								</div>
-
-								<!-- Client #3 -->
-								<div class="client">
-									<img class="center-block" src="assets/images/clients/cruzroja.webp"
-										alt="client">
-								</div>
-
-								<!-- Client #4 -->
-								<div class="client">
-									<img class="center-block" src="assets/images/clients/ucapre.webp"
-										alt="client">
-								</div>
-
-								<!-- Client #5 -->
-								<div class="client">
-									<img class="center-block" src="assets/images/clients/pheni.webp"
-										alt="client">
-								</div>
-								<!-- Client #3 -->
-								<div class="client">
-									<img class="center-block" src="assets/images/clients/faicic.webp"
-										alt="client">
-								</div>
-
-							</div>
-						</div>
-						<!-- .col-md-12 end -->
-					</div>
-					<!-- .row end -->
-				</div>
-				<!-- .container end -->
-			</section>
-
-			<section id="banner" class="section cta pt-0 pb-0">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-7 col-content pl-100">
-							<div class="heading heading-1 wow fadeInUp" data-wow-duration="1s">
-								<h2 class="heading--title">Comunicate Con Nosotros</h2>
-								<p class="heading--desc">Nuestro equipo jurídico y administrativo está
-									listo para atenderte.</p>
-								<div class="heading--divider mb-80"></div>
-							</div>
-							<div class="form-request">
-								<div class="row">
-									<!-- FORMULARIO ADAPTADO -->
-									<form class="mb-0" id="lawmedic-contact-form"
-										onsubmit="enviarWhatsApp(event)">
-										<div class="col-xs-12 col-sm-12 col-md-6">
-											<input type="text" class="form-control" name="name" id="lm-name"
-												placeholder="Tu Nombre Completo" required>
-										</div>
-										<!-- .col-md-6 end -->
-										<div class="col-xs-12 col-sm-12 col-md-6">
-											<input type="email" class="form-control" name="email" id="lm-email"
-												placeholder="Tu Correo" required>
-										</div>
-										<!-- .col-md-6 end -->
-										<div class="col-xs-12 col-sm-12 col-md-12">
-											<select class="form-control" name="service" id="lm-service" required>
-												<option value>Servicio</option>
-												<option>Asesoría</option>
-												<option>Busco Empleo</option>
-												<option>Soy Proovedor</option>
-											</select>
-										</div>
-										<!-- .col-md-12 end -->
-										<div class="col-xs-12 col-sm-12 col-md-12">
-											<textarea class="form-control" name="your-message" id="lm-message"
-												rows="3"
-												placeholder="Tu Mensaje" required></textarea>
-										</div>
-										<!-- .col-md-12 end -->
-										<div class="col-xs-12 col-sm-12 col-md-6">
-											<input type="submit" class="btn btn--primary" value="Enviar">
-										</div>
-										<!-- .col-md-6 end -->
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-12 col-md-5 pr-0 pl-0">
-							<div class="col-img">
-								<div class="img-responsive center-block">
-									<img src="assets/images/background/bg-2.png" alt="Background" 
-									style="width:100%;
-                height:auto;
-                display:block;
-                filter: grayscale(100%) contrast(1.1) brightness(0.9) !important;
-                object-fit:cover;" />
-								</div>
-							</div>
-						</div>
-						<!-- .col-md-6 end-->
-					</div>
-					<!-- .row end -->
-				</div>
-				<!-- .container end -->
-			</section>
-
-			<footer id="footer" class="footer">
-				<!-- Widget Section -->
-				<div class="footer-widget">
-					<div class="container">
-						<div class="row">
-							<!-- Izquierda: Logo + descripción + redes -->
-							<div class="col-xs-12 col-sm-6 col-md-4 footer--widget-about">
-								<div class="footer--widget-content">
-									<img class="mb-20" src="assets/images/logo//logo_lM.webp" alt="logo">
-									<p>Consultoría médico-legal y sanitaria. Cumplimiento normativo,
-										acreditación y capacitación para clínicas y hospitales.</p>
-									<div class="social">
-										<a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
-										<a class="share-facebook" href="#"><i class="fa fa-facebook"></i></a>
-										<a class="share-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-										<a class="share-pinterest" href="#"><i
-												class="fa fa-pinterest-p"></i></a>
-									</div>
-								</div>
-							</div>
-
-							<!-- Centro: Get in Touch -->
-							<div class="col-xs-12 col-sm-6 col-md-4 footer--widget-contact">
-								<div class="footer--widget-title">
-									<h5>Ponte En Contacto</h5>
-								</div>
-								<div class="footer--widget-content">
-									<ul class="list-unstyled mb-0">
-										<li><i class="fa fa-map-marker"></i> Veracruz, México</li>
-										<li><i class="fa fa-phone"></i> 2299312385</li>
-										<li><i class="fa fa-envelope-o"></i> contacto@lawmedic.mx</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Derecha: Mapa -->
-							<div class="col-xs-12 col-sm-12 col-md-4">
-								<div class="map-container">
-									<iframe
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44929.123456789!2d-96.130000!3d19.046000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c340abcd1234%3A0xabcdef1234567890!2sBoca+del+R%C3%ADo,+Veracruz+94150,+M%C3%A9xico!5e0!3m2!1ses!2smx!4v0000000000000!5m2!1ses!2smx"
-										width="100%" height="300" style="border:0;" allowfullscreen
-										loading="lazy"
-										referrerpolicy="no-referrer-when-downgrade">
-									</iframe>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Copyright -->
-				<div class="footer--copyright">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12 text--center">
-								<span>
-									&copy; 2019 Corporativo LAWMedic (marca registrada IMPI) - Todos los
-									derechos reservados. Powered by Aureostudio.
-									<br>
-									<a href="aviso-privacidad.html" target="_blank"
-										style="color: #c9a062; text-decoration: none;">
-										Aviso de Privacidad
-									</a>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-
-		</div>
-
-		<script src="assets/js/jquery-2.2.4.min.js"></script>
-		<script src="assets/js/plugins.js"></script>
-		<script src="assets/js/functions.js"></script>
-	</body>
+<!-- Scripts -->
+<script src="assets/vendors/jquery/jquery-3.6.4.min.js"></script>
+<script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendors/jarallax/jarallax.min.js"></script>
+<script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+<script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+<script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+<script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+<script src="assets/vendors/nouislider/nouislider.min.js"></script>
+<script src="assets/vendors/odometer/odometer.min.js"></script>
+<script src="assets/vendors/swiper/swiper.min.js"></script>
+<script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+<script src="assets/vendors/wnumb/wNumb.min.js"></script>
+<script src="assets/vendors/wow/wow.js"></script>
+<script src="assets/vendors/isotope/isotope.js"></script>
+<script src="assets/vendors/countdown/countdown.min.js"></script>
+<script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+<script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="assets/vendors/vegas/vegas.min.js"></script>
+<script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+<script src="assets/vendors/timepicker/timePicker.js"></script>
+<script src="assets/vendors/circleType/jquery.circleType.js"></script>
+<script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+<script src="assets/vendors/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+<script src="assets/js/pitoon.js"></script>
+</body>
 </html>
