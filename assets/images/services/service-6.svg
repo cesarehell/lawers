@@ -6,8 +6,8 @@
     </linearGradient>
   </defs>
   <rect width="640" height="360" fill="url(#bg6)"/>
-  <circle cx="120" cy="90" r="90" fill="#f9be17" opacity="0.12"/>
-  <g transform="translate(210 80)" fill="none" stroke="#f9be17" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="90" r="90" fill="#c33232" opacity="0.12"/>
+  <g transform="translate(210 80)" fill="none" stroke="#c33232" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
     <path d="M120 0l30 80 80 0-65 45 25 85-70-50-70 50 25-85-65-45 80 0z"/>
   </g>
   <text x="40" y="320" fill="#ffffff" font-family="Manrope, sans-serif" font-size="22">LAWMedic Plus</text>
