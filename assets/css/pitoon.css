@@ -96,8 +96,8 @@
   --pitoon-gray-rgb: 117, 122, 123;
   --pitoon-white: #ffffff;
   --pitoon-white-rgb: 255, 255, 255;
-  --pitoon-base: #f9be17;
-  --pitoon-base-rgb: 249, 190, 23;
+  --pitoon-base: #c33232;
+  --pitoon-base-rgb: 195, 50, 50;
   --pitoon-black: #04171a;
   --pitoon-black-rgb: 4, 23, 26;
   --pitoon-primary: #f5f3ee;
@@ -3566,9 +3566,9 @@ ul {
   display: block;
   width: 0px;
   height: 9px;
-  background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
-  background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
-  background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
+  background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
   -webkit-transition: all 1500ms ease;
   -ms-transition: all 1500ms ease;
   -o-transition: all 1500ms ease;
@@ -4737,9 +4737,9 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -moz-linear-gradient(90deg, rgb(249, 190, 23) 0%, rgba(4, 23, 26, 0) 100%);
-  background-image: -webkit-linear-gradient(90deg, rgb(249, 190, 23) 0%, rgba(4, 23, 26, 0) 100%);
-  background-image: -ms-linear-gradient(90deg, rgb(249, 190, 23) 0%, rgba(4, 23, 26, 0) 100%);
+  background-image: -moz-linear-gradient(90deg, rgb(195, 50, 50) 0%, rgba(4, 23, 26, 0) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgb(195, 50, 50) 0%, rgba(4, 23, 26, 0) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(195, 50, 50) 0%, rgba(4, 23, 26, 0) 100%);
   background-repeat: no-repeat;
   background-position: bottom left;
   -webkit-transform: scale(1, 0);
@@ -4921,9 +4921,9 @@ ul {
 
 .thm-owl__carousel--range__input .irs--flat .irs-bar {
   border-radius: 0px;
-  background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
-  background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
-  background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
+  background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
   height: 3px;
 }
 
@@ -9525,9 +9525,9 @@ ul {
   top: 50%;
   left: 11px;
   transform: translateY(-50%);
-  background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
-  background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
-  background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
+  background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
   width: 73px;
   height: 2px;
 }
@@ -9548,9 +9548,9 @@ ul {
   top: 50%;
   right: 11px;
   transform: translateY(-50%);
-  background-image: -moz-linear-gradient(0deg, rgb(249, 190, 23) 0%, rgb(4, 23, 26) 100%);
-  background-image: -webkit-linear-gradient(0deg, rgb(249, 190, 23) 0%, rgb(4, 23, 26) 100%);
-  background-image: -ms-linear-gradient(0deg, rgb(249, 190, 23) 0%, rgb(4, 23, 26) 100%);
+  background-image: -moz-linear-gradient(0deg, rgb(195, 50, 50) 0%, rgb(4, 23, 26) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(195, 50, 50) 0%, rgb(4, 23, 26) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(195, 50, 50) 0%, rgb(4, 23, 26) 100%);
   width: 73px;
   height: 2px;
 }
@@ -10424,7 +10424,7 @@ ul {
   display: block;
   padding: 41px 60px 50px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 0px 0px rgba(249, 190, 23, 0.004);
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 0px 0px rgba(195, 50, 50, 0.004);
   margin-top: 9px;
 }
 
@@ -11966,7 +11966,7 @@ ul {
 }
 
 .pricing-page__single:hover .pricing-page__icon {
-  background-color: rgb(249, 190, 23);
+  background-color: rgb(195, 50, 50);
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -12279,9 +12279,9 @@ ul {
   border-radius: 0px;
   top: 0px;
   left: 0px;
-  background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
-  background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
-  background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(249, 190, 23) 100%);
+  background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgb(195, 50, 50) 100%);
   -webkit-transition: all 1500ms ease;
   transition: all 1500ms ease;
 }
