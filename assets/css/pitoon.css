@@ -825,7 +825,9 @@ ul {
 }
 
 .main-menu__call-icon img {
-  width: auto;
+  width: 31px;
+  height: 28px;
+  display: block;
 }
 
 .main-menu__call-content {
