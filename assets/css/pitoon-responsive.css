@@ -1872,3 +1872,42 @@
         padding-right: 30px;
     }
 }
+
+/* Menu principal: compensar el espacio al pasar a 8 items ("Unete como Proveedor").
+   Reduce la separacion entre items y el margen del logo en los anchos donde el
+   header quedaria justo; a partir de 1800px se mantienen los valores originales. */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .main-menu .main-menu__list>li+li,
+    .stricky-header .main-menu__list>li+li {
+        margin-left: 26px;
+    }
+
+    .main-menu__logo {
+        margin-right: 90px;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+
+    .main-menu .main-menu__list>li+li,
+    .stricky-header .main-menu__list>li+li {
+        margin-left: 28px;
+    }
+
+    .main-menu__logo {
+        margin-right: 90px;
+    }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+
+    .main-menu .main-menu__list>li+li,
+    .stricky-header .main-menu__list>li+li {
+        margin-left: 38px;
+    }
+
+    .main-menu__logo {
+        margin-right: 120px;
+    }
+}
